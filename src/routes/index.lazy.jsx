@@ -13,11 +13,11 @@ function RouteComponent() {
 		<div className="h-full flex flex-col gap-1">
 			<div className="grid gap-1 h-full grid-cols-4">
 				<div className="h-full flex flex-col gap-1">
-					<div className="info h-[10%] flex gap-1">
-						<img src="https://placehold.co/75" alt="Character Image" />
-						<div className="w-full">Name</div>
+					<div className="info h-[15%] flex gap-1">
+						<img src="https://placehold.co/100" alt="Character Appearance" />
+						<div className="w-full">Character Name</div>
 					</div>
-					<div className="grid gap-1 h-[90%] grid-cols-3">
+					<div className="grid gap-1 h-[85%] grid-cols-3">
 						<div className="flex flex-col gap-1">
 							<div className="h-[16.6%]">Strength</div>
 							<div className="h-[16.6%]">Dexterity</div>
@@ -27,8 +27,9 @@ function RouteComponent() {
 							<div className="h-[16.6%]">Charisma</div>
 						</div>
 						<div className="h-full col-span-2 flex flex-col gap-1">
+							<div className="h-[7%]">Proficiency bonus</div>
 							<div className="h-[20%]">Saving throws</div>
-							<div className="h-[73%]">Skills</div>
+							<div className="h-[66%]">Skills</div>
 							<div className="h-[7%]">Passive perception</div>
 						</div>
 					</div>
@@ -42,19 +43,18 @@ function RouteComponent() {
 					</div>
 					<div className="grid gap-1 h-[93%] grid-cols-5">
 						<div className="col-span-2 h-full flex flex-col gap-1">
-							<div className="h-[60%] flex flex-col gap-1">
-								<div className="h-[33.3%] grid gap-1 grid-cols-3">
+							<div className="h-[30%] flex flex-col gap-1">
+								<div className="h-[50%] grid gap-1 grid-cols-3">
 									<div>Armor Class</div>
 									<div>Initiative</div>
 									<div>Speed</div>
 								</div>
-								<div className="h-[33.3%]">Current hit points</div>
-								<div className="h-[33.3%] grid gap-1 grid-cols-2">
-									<div>Hit dice</div>
-									<div>Death saves</div>
+								<div className="h-[50%] grid gap-1 grid-cols-2">
+									<div>Hit point maximum</div>
+									<div>Total hit dice</div>
 								</div>
 							</div>
-							<div className="h-[40%] grid grid-cols-5 gap-1">
+							<div className="h-[70%] grid grid-cols-5 gap-1">
 								<div className="col-span-4">Equipment</div>
 								<div className="flex flex-col gap-1">
 									<div className="h-[20%]">CP</div>
@@ -66,10 +66,19 @@ function RouteComponent() {
 							</div>
 						</div>
 						<div className="col-span-3 h-full flex flex-col gap-1">
-							<div className="h-[40%]">Attacks and spellcasting</div>
-							<div className="h-[40%]">Features and traits</div>
-							<div className="h-[20%]">
-								Other proficiencies and languages
+							<div className="h-[40%] grid grid-cols-8 gap-1">
+								<div className="col-span-7">Attacks and spellcasting</div>
+								<div className="flex flex-col gap-1">
+									<div className="h-[33.3%]">
+										Spell- casting ability
+									</div>
+									<div className="h-[33.3%]">Spell save DC</div>
+									<div className="h-[33.3%]">Spell atack bonus</div>
+								</div>
+							</div>
+							<div className="h-[60%] grid grid-cols-2 gap-1">
+								<div className="">Features and traits</div>
+								<div className="">Other proficiencies and languages</div>
 							</div>
 						</div>
 					</div>
