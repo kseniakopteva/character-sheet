@@ -1,4 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
+import AbilityScores from "../AbilityScores";
 import CharacterClass from "../CharacterClass";
 import CharacterRace from "../CharacterRace";
 import CharacterLevel from "../CharacterLevel";
@@ -18,14 +19,7 @@ function RouteComponent() {
 						<div className="w-full">Character Name</div>
 					</div>
 					<div className="grid gap-1 h-[85%] grid-cols-3">
-						<div className="flex flex-col gap-1">
-							<div className="h-[16.6%]">Strength</div>
-							<div className="h-[16.6%]">Dexterity</div>
-							<div className="h-[16.6%]">Constitution</div>
-							<div className="h-[16.6%]">Intelligence</div>
-							<div className="h-[16.6%]">Wisdom</div>
-							<div className="h-[16.6%]">Charisma</div>
-						</div>
+						<AbilityScores />
 						<div className="h-full col-span-2 flex flex-col gap-1">
 							<div className="h-[7%]">Proficiency bonus</div>
 							<div className="h-[20%]">Saving throws</div>
