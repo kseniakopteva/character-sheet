@@ -1,16 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AbilityScoreContext, SkillContext } from "./contexts";
 
 export default function AbilityScores() {
 	const [totalPoints, setTotalPoints] = useState(27);
 
-	const [abilityScores, setAbilityScores] = useState({
-		str: 8,
-		dex: 8,
-		con: 8,
-		int: 8,
-		wis: 8,
-		cha: 8,
-	});
+	const [abilityScores, setAbilityScores] = useContext(AbilityScoreContext);
+	const [skills] = useContext(SkillContext);
 
 	function reset() {
 		setTotalPoints(27);
@@ -22,6 +17,13 @@ export default function AbilityScores() {
 			wis: 8,
 			cha: 8,
 		});
+		setSkillValues(skills.map((elem) => (elem.value = -1)));
+	}
+
+	function setSkillValues(value, base) {
+		const filteredSkills = skills.filter((elem) => elem.base === base);
+		const modifier = Math.floor((value - 10) / 2);
+		filteredSkills.map((elem) => (elem.value = modifier));
 	}
 
 	// TODO: Refactor point buy calculator
@@ -30,7 +32,8 @@ export default function AbilityScores() {
 		<div className="flex flex-col gap-1 text-sm">
 			<div className="h-[7%]">
 				<span>Points: {totalPoints}/27</span>
-				<button className="underline" onClick={reset}>
+				<br />
+				<button className="underline cursor-pointer" onClick={reset}>
 					Reset
 				</button>
 			</div>
@@ -41,8 +44,9 @@ export default function AbilityScores() {
 					<button
 						className="w-[50%] border cursor-pointer"
 						onClick={() => {
+							let newAbilityScoreValue = abilityScores.str - 1;
 							let newTotal = totalPoints;
-							switch (abilityScores.str - 1) {
+							switch (newAbilityScoreValue) {
 								case 8:
 								case 9:
 								case 10:
@@ -64,8 +68,9 @@ export default function AbilityScores() {
 								setTotalPoints(newTotal);
 								setAbilityScores({
 									...abilityScores,
-									str: abilityScores.str - 1,
+									str: newAbilityScoreValue,
 								});
+								setSkillValues(newAbilityScoreValue, "strength");
 							}
 						}}
 					>
@@ -98,6 +103,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									str: abilityScores.str + 1,
 								});
+								setSkillValues(abilityScores.str + 1, "strength");
 							}
 						}}
 					>
@@ -137,6 +143,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									dex: abilityScores.dex - 1,
 								});
+								setSkillValues(abilityScores.dex - 1, "dexterity");
 							}
 						}}
 					>
@@ -169,6 +176,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									dex: abilityScores.dex + 1,
 								});
+								setSkillValues(abilityScores.dex + 1, "dexterity");
 							}
 						}}
 					>
@@ -208,6 +216,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									con: abilityScores.con - 1,
 								});
+								setSkillValues(abilityScores.con - 1, "constitution");
 							}
 						}}
 					>
@@ -240,6 +249,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									con: abilityScores.con + 1,
 								});
+								setSkillValues(abilityScores.con + 1, "constitution");
 							}
 						}}
 					>
@@ -279,6 +289,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									int: abilityScores.int - 1,
 								});
+								setSkillValues(abilityScores.int - 1, "intelligence");
 							}
 						}}
 					>
@@ -311,6 +322,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									int: abilityScores.int + 1,
 								});
+								setSkillValues(abilityScores.int + 1, "intelligence");
 							}
 						}}
 					>
@@ -350,6 +362,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									wis: abilityScores.wis - 1,
 								});
+								setSkillValues(abilityScores.wis - 1, "wisdom");
 							}
 						}}
 					>
@@ -382,6 +395,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									wis: abilityScores.wis + 1,
 								});
+								setSkillValues(abilityScores.wis + 1, "wisdom");
 							}
 						}}
 					>
@@ -421,6 +435,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									cha: abilityScores.cha - 1,
 								});
+								setSkillValues(abilityScores.cha - 1, "charisma");
 							}
 						}}
 					>
@@ -453,6 +468,7 @@ export default function AbilityScores() {
 									...abilityScores,
 									cha: abilityScores.cha + 1,
 								});
+								setSkillValues(abilityScores.cha + 1, "charisma");
 							}
 						}}
 					>

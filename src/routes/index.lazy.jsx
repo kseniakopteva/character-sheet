@@ -1,15 +1,21 @@
+import { useContext } from "react";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import AbilityScores from "../AbilityScores";
+import SavingThrows from "../SavingThrows";
+import Skills from "../Skills";
 import CharacterClass from "../CharacterClass";
 import CharacterRace from "../CharacterRace";
 import CharacterLevel from "../CharacterLevel";
 import CharacterBackground from "../CharacterBackground";
+import { SkillContext } from "../contexts";
 
 export const Route = createLazyFileRoute("/")({
 	component: RouteComponent,
 });
 
 function RouteComponent() {
+	const [skills] = useContext(SkillContext);
+
 	return (
 		<div className="h-full flex flex-col gap-1">
 			<div className="grid gap-1 h-full grid-cols-4">
@@ -21,10 +27,14 @@ function RouteComponent() {
 					<div className="grid gap-1 h-[85%] grid-cols-3">
 						<AbilityScores />
 						<div className="h-full col-span-2 flex flex-col gap-1">
-							<div className="h-[7%]">Proficiency bonus</div>
-							<div className="h-[20%]">Saving throws</div>
-							<div className="h-[66%]">Skills</div>
-							<div className="h-[7%]">Passive perception</div>
+							<div className="h-[5%]">Proficiency bonus</div>
+							<SavingThrows styles={"h-[24%]"} />
+							<Skills styles={"h-[66%]"} />
+							<div className="h-[5%]">
+								Passive perception: (
+								{skills.find((elem) => elem.index === "perception").value}
+								)
+							</div>
 						</div>
 					</div>
 				</div>
