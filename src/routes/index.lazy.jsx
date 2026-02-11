@@ -1,4 +1,8 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
+import CharacterClass from "../CharacterClass";
+import CharacterRace from "../CharacterRace";
+import CharacterLevel from "../CharacterLevel";
+import CharacterBackground from "../CharacterBackground";
 
 export const Route = createLazyFileRoute("/")({
 	component: RouteComponent,
@@ -31,10 +35,10 @@ function RouteComponent() {
 				</div>
 				<div className="col-span-3 h-full flex flex-col gap-1">
 					<div className="grid gap-1 h-[7%] grid-cols-4">
-						<div>Class</div>
-						<div>Race</div>
-						<div>Level</div>
-						<div>Background</div>
+						<CharacterClass />
+						<CharacterRace />
+						<CharacterLevel />
+						<CharacterBackground />
 					</div>
 					<div className="grid gap-1 h-[93%] grid-cols-5">
 						<div className="col-span-2 h-full flex flex-col gap-1">
