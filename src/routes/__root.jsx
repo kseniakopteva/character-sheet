@@ -10,10 +10,10 @@ function RootComponent() {
 	// TODO: Put hooks somewhere else
 
 	const characterInfoHook = useState({
-		characterClass: null,
-		characterRace: null,
-		characterLevel: null,
-		characterBackground: null,
+		characterClass: "",
+		characterRace: "",
+		characterLevel: "",
+		characterBackground: "",
 	});
 	const abilityScoresHook = useState({
 		str: 8,

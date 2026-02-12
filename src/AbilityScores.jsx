@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { AbilityScoreContext, SkillContext } from "./contexts";
+import Card from "./Card";
 
 export default function AbilityScores() {
 	const [totalPoints, setTotalPoints] = useState(27);
@@ -7,475 +8,110 @@ export default function AbilityScores() {
 	const [abilityScores, setAbilityScores] = useContext(AbilityScoreContext);
 	const [skills] = useContext(SkillContext);
 
-	function reset() {
-		setTotalPoints(27);
-		setAbilityScores({
-			str: 8,
-			dex: 8,
-			con: 8,
-			int: 8,
-			wis: 8,
-			cha: 8,
-		});
-		setSkillValues(skills.map((elem) => (elem.value = -1)));
-	}
-
 	function setSkillValues(value, base) {
 		const filteredSkills = skills.filter((elem) => elem.base === base);
 		const modifier = Math.floor((value - 10) / 2);
 		filteredSkills.map((elem) => (elem.value = modifier));
 	}
 
-	// TODO: Refactor point buy calculator
+	// TODO: remove the array with the ability score full names, put them inside the hook
+
+	const allAbScores = [
+		{
+			index: "strength",
+		},
+		{
+			index: "dexterity",
+		},
+		{
+			index: "constitution",
+		},
+		{
+			index: "intelligence",
+		},
+		{
+			index: "wisdom",
+		},
+		{
+			index: "charisma",
+		},
+	];
 
 	return (
-		<div className="flex flex-col gap-1 text-sm">
-			<div className="h-[7%]">
+		<div className="flex flex-col text-sm">
+			<Card styles="h-[7%]">
 				<span>Points: {totalPoints}/27</span>
 				<br />
-				<button className="underline cursor-pointer" onClick={reset}>
+				<button
+					className="underline cursor-pointer"
+					onClick={() => {
+						setTotalPoints(27);
+						setAbilityScores({
+							str: 8,
+							dex: 8,
+							con: 8,
+							int: 8,
+							wis: 8,
+							cha: 8,
+						});
+						setSkillValues(skills.map((elem) => (elem.value = -1)));
+					}}
+				>
 					Reset
 				</button>
-			</div>
-			<div className="h-[15.5%] flex flex-col gap-1 justify-between">
-				<span>Strength: {abilityScores.str}</span>
-				<span>Modifier: ({Math.floor((abilityScores.str - 10) / 2)})</span>
-				<div className="flex gap-1">
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newAbilityScoreValue = abilityScores.str - 1;
-							let newTotal = totalPoints;
-							switch (newAbilityScoreValue) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints + 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints + 2;
-									break;
+			</Card>
 
-								default:
-									break;
-							}
-
-							if (abilityScores.str > 8) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									str: newAbilityScoreValue,
-								});
-								setSkillValues(newAbilityScoreValue, "strength");
-							}
-						}}
-					>
-						-
-					</button>
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.str + 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints - 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints - 2;
-									break;
-
-								default:
-									break;
-							}
-							if (abilityScores.str < 15 && newTotal >= 0) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									str: abilityScores.str + 1,
-								});
-								setSkillValues(abilityScores.str + 1, "strength");
-							}
-						}}
-					>
-						+
-					</button>
-				</div>
-			</div>
-			<div className="h-[15.5%] flex flex-col gap-1 justify-between">
-				<span>Dexterity: {abilityScores.dex}</span>
-				<span>Modifier: ({Math.floor((abilityScores.dex - 10) / 2)})</span>
-				<div className="flex gap-1">
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.dex - 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints + 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints + 2;
-									break;
-
-								default:
-									break;
-							}
-
-							if (abilityScores.dex > 8) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									dex: abilityScores.dex - 1,
-								});
-								setSkillValues(abilityScores.dex - 1, "dexterity");
-							}
-						}}
-					>
-						-
-					</button>
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.dex + 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints - 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints - 2;
-									break;
-
-								default:
-									break;
-							}
-							if (abilityScores.dex < 15 && newTotal >= 0) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									dex: abilityScores.dex + 1,
-								});
-								setSkillValues(abilityScores.dex + 1, "dexterity");
-							}
-						}}
-					>
-						+
-					</button>
-				</div>
-			</div>
-			<div className="h-[15.5%] flex flex-col gap-1 justify-between">
-				<span>Constitution: {abilityScores.con}</span>
-				<span>Modifier: ({Math.floor((abilityScores.con - 10) / 2)})</span>
-				<div className="flex gap-1">
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.con - 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints + 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints + 2;
-									break;
-
-								default:
-									break;
-							}
-
-							if (abilityScores.con > 8) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									con: abilityScores.con - 1,
-								});
-								setSkillValues(abilityScores.con - 1, "constitution");
-							}
-						}}
-					>
-						-
-					</button>
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.con + 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints - 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints - 2;
-									break;
-
-								default:
-									break;
-							}
-							if (abilityScores.con < 15 && newTotal >= 0) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									con: abilityScores.con + 1,
-								});
-								setSkillValues(abilityScores.con + 1, "constitution");
-							}
-						}}
-					>
-						+
-					</button>
-				</div>
-			</div>
-			<div className="h-[15.5%] flex flex-col gap-1 justify-between">
-				<span>Intelligence: {abilityScores.int}</span>
-				<span>Modifier: ({Math.floor((abilityScores.int - 10) / 2)})</span>
-				<div className="flex gap-1">
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.int - 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints + 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints + 2;
-									break;
-
-								default:
-									break;
-							}
-
-							if (abilityScores.int > 8) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									int: abilityScores.int - 1,
-								});
-								setSkillValues(abilityScores.int - 1, "intelligence");
-							}
-						}}
-					>
-						-
-					</button>
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.int + 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints - 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints - 2;
-									break;
-
-								default:
-									break;
-							}
-							if (abilityScores.int < 15 && newTotal >= 0) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									int: abilityScores.int + 1,
-								});
-								setSkillValues(abilityScores.int + 1, "intelligence");
-							}
-						}}
-					>
-						+
-					</button>
-				</div>
-			</div>
-			<div className="h-[15.5%] flex flex-col gap-1 justify-between">
-				<span>Wisdom: {abilityScores.wis}</span>
-				<span>Modifier: ({Math.floor((abilityScores.wis - 10) / 2)})</span>
-				<div className="flex gap-1">
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.wis - 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints + 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints + 2;
-									break;
-
-								default:
-									break;
-							}
-
-							if (abilityScores.wis > 8) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									wis: abilityScores.wis - 1,
-								});
-								setSkillValues(abilityScores.wis - 1, "wisdom");
-							}
-						}}
-					>
-						-
-					</button>
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.wis + 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints - 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints - 2;
-									break;
-
-								default:
-									break;
-							}
-							if (abilityScores.wis < 15 && newTotal >= 0) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									wis: abilityScores.wis + 1,
-								});
-								setSkillValues(abilityScores.wis + 1, "wisdom");
-							}
-						}}
-					>
-						+
-					</button>
-				</div>
-			</div>
-			<div className="h-[15.5%] flex flex-col gap-1 justify-between">
-				<span>Charisma: {abilityScores.cha}</span>
-				<span>Modifier: ({Math.floor((abilityScores.cha - 10) / 2)})</span>
-				<div className="flex gap-1">
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.cha - 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints + 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints + 2;
-									break;
-
-								default:
-									break;
-							}
-
-							if (abilityScores.cha > 8) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									cha: abilityScores.cha - 1,
-								});
-								setSkillValues(abilityScores.cha - 1, "charisma");
-							}
-						}}
-					>
-						-
-					</button>
-					<button
-						className="w-[50%] border cursor-pointer"
-						onClick={() => {
-							let newTotal = totalPoints;
-							switch (abilityScores.cha + 1) {
-								case 8:
-								case 9:
-								case 10:
-								case 11:
-								case 12:
-								case 13:
-									newTotal = totalPoints - 1;
-									break;
-								case 14:
-								case 15:
-									newTotal = totalPoints - 2;
-									break;
-
-								default:
-									break;
-							}
-							if (abilityScores.cha < 15 && newTotal >= 0) {
-								setTotalPoints(newTotal);
-								setAbilityScores({
-									...abilityScores,
-									cha: abilityScores.cha + 1,
-								});
-								setSkillValues(abilityScores.cha + 1, "charisma");
-							}
-						}}
-					>
-						+
-					</button>
-				</div>
-			</div>
+			{Array.from(allAbScores, (element) => abilityComponent(element.index))}
 		</div>
 	);
+
+	function abilityComponent(index) {
+		const current = abilityScores[index.slice(0, 3)];
+		return (
+			<Card key={index} styles="h-[15.5%] grid grid-cols-3 gap-1" title={index}>
+				<div className="col-span-2 flex items-center justify-center rounded-lg border-slate-300 border mb-4 gap-1">
+					<span className="text-2xl">{current}</span>
+					<span className="text-lg">({Math.floor((current - 10) / 2)})</span>
+				</div>
+				<div className="gap-1 w-full">
+					{btn(true, "w-full")}
+					{btn(false, "w-full")}
+				</div>
+			</Card>
+		);
+
+		function btn(increase, styles) {
+			return (
+				<button
+					className={
+						styles +
+						" mb-1 cursor-pointer float-right max-w-8 h-8 p-1 font-black rounded-lg border-slate-300 border bg-slate-200"
+					}
+					onClick={() => {
+						let newVal = increase ? current + 1 : current - 1;
+						let newTotal = totalPoints;
+
+						if (newVal >= 8 && newVal <= 13)
+							newTotal = increase ? totalPoints - 1 : totalPoints + 1;
+						else if (newVal >= 14 && newVal <= 15)
+							newTotal = increase ? totalPoints - 2 : totalPoints + 2;
+
+						if (
+							(!increase && current > 8) ||
+							(increase && current < 15 && newTotal >= 0)
+						) {
+							setTotalPoints(newTotal);
+							setAbilityScores((prev) => ({
+								...prev,
+								[index.slice(0, 3)]: newVal,
+							}));
+							setSkillValues(newVal, index);
+						}
+					}}
+				>
+					{increase ? "+" : "-"}
+				</button>
+			);
+		}
+	}
 }

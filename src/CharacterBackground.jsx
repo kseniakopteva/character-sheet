@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import { CharacterContext } from "./contexts";
+import Card from "./Card";
 
-export default function characterBackground() {
+export default function characterBackground({ styles }) {
 	const [characterInfo, setCharacterInfo] = useContext(CharacterContext);
 
 	const [characterBackgrounds, setCharacterBackgrounds] = useState(null);
@@ -17,23 +18,31 @@ export default function characterBackground() {
 	}
 
 	if (!characterBackgrounds) {
-		return <p>Loading ...</p>;
+		return (
+			<Card>
+				<div className="h-full w-full flex items-center justify-center">
+					Loading ...
+				</div>
+			</Card>
+		);
 	}
 
 	return (
-		<select
-			className="h-full w-full border-black border p-1"
-			onChange={(e) =>
-				setCharacterInfo({
-					...characterInfo,
-					characterBackground: e.target.value,
-				})
-			}
-			value={characterInfo.characterRace}
-		>
-			{characterBackgrounds.map((c) => (
-				<option key={c.index}>{c.name}</option>
-			))}
-		</select>
+		<Card className={" h-full w-full" + styles}>
+			<select
+				className="h-full w-full p-1 border-slate-300 border bg-slate-200"
+				onChange={(e) =>
+					setCharacterInfo({
+						...characterInfo,
+						characterBackground: e.target.value,
+					})
+				}
+				value={characterInfo.characterRace}
+			>
+				{characterBackgrounds.map((c) => (
+					<option key={c.index}>{c.name}</option>
+				))}
+			</select>
+		</Card>
 	);
 }
