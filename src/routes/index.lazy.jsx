@@ -7,7 +7,7 @@ import CharacterClass from "../CharacterClass";
 import CharacterRace from "../CharacterRace";
 import CharacterLevel from "../CharacterLevel";
 import CharacterBackground from "../CharacterBackground";
-import { CharacterContext, SkillContext } from "../contexts";
+import { AbilityScoreContext, CharacterContext, SkillContext } from "../contexts";
 import Card from "../Card";
 
 export const Route = createLazyFileRoute("/")({
@@ -17,7 +17,13 @@ export const Route = createLazyFileRoute("/")({
 function RouteComponent() {
 	const [skills] = useContext(SkillContext);
 	const [characterInfo] = useContext(CharacterContext);
-	const passivePerception = skills.find((elem) => elem.index === "perception").value;
+
+	const [abilityScores] = useContext(AbilityScoreContext);
+	// TODO: remove modifier calculation from here
+	const mod = Math.floor((abilityScores.wis - 10) / 2);
+	const passiveWisdom = skills.find((elem) => elem.index === "perception").proficiency
+		? mod + characterInfo.characterProficiencyBonus
+		: mod;
 
 	return (
 		<div className="h-full flex flex-col bg-slate-200 text-[0.93rem]">
@@ -43,11 +49,11 @@ function RouteComponent() {
 							<SavingThrows styles={"h-[24%]"} title={"Saving Throws"} />
 							<Skills styles={"h-[66%]"} title={"Skills"} />
 							<Card styles={"h-[5%]"}>
-								Passive perception:
+								Passive wisdom
 								<span className=" inline-block px-2 border-b ml-2">
-									{passivePerception < 0
-										? passivePerception
-										: "+" + passivePerception}
+									{passiveWisdom < 0
+										? passiveWisdom
+										: "+" + passiveWisdom}
 								</span>
 							</Card>
 						</div>
