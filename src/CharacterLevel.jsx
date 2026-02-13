@@ -5,6 +5,14 @@ import Card from "./Card";
 export default function CharacterLevel({ styles }) {
 	const [characterInfo, setCharacterInfo] = useContext(CharacterContext);
 
+	function calcProfBonus(level) {
+		if (level >= 17) return 6;
+		if (level >= 13) return 5;
+		if (level >= 9) return 4;
+		if (level >= 5) return 3;
+		return 2;
+	}
+
 	return (
 		<Card className={" h-full w-full" + styles}>
 			<input
@@ -14,7 +22,11 @@ export default function CharacterLevel({ styles }) {
 				id="level"
 				placeholder="Level"
 				onChange={(e) =>
-					setCharacterInfo({ ...characterInfo, characterLevel: e.target.value })
+					setCharacterInfo((prev) => ({
+						...prev,
+						characterLevel: e.target.value,
+						characterProficiencyBonus: calcProfBonus(e.target.value),
+					}))
 				}
 			/>
 		</Card>

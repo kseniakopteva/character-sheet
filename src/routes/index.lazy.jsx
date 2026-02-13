@@ -7,7 +7,7 @@ import CharacterClass from "../CharacterClass";
 import CharacterRace from "../CharacterRace";
 import CharacterLevel from "../CharacterLevel";
 import CharacterBackground from "../CharacterBackground";
-import { SkillContext } from "../contexts";
+import { CharacterContext, SkillContext } from "../contexts";
 import Card from "../Card";
 
 export const Route = createLazyFileRoute("/")({
@@ -16,6 +16,8 @@ export const Route = createLazyFileRoute("/")({
 
 function RouteComponent() {
 	const [skills] = useContext(SkillContext);
+	const [characterInfo] = useContext(CharacterContext);
+	const passivePerception = skills.find((elem) => elem.index === "perception").value;
 
 	return (
 		<div className="h-full flex flex-col bg-slate-200 text-[0.93rem]">
@@ -32,13 +34,21 @@ function RouteComponent() {
 					<div className="grid h-[85%] grid-cols-3">
 						<AbilityScores />
 						<div className="h-full col-span-2 flex flex-col">
-							<Card styles={"h-[5%]"}>Proficiency bonus</Card>
+							<Card styles={"h-[5%] flex items-center"}>
+								<span className=" inline-block px-2 border-b mr-2">
+									+{characterInfo.characterProficiencyBonus}
+								</span>
+								Proficiency bonus
+							</Card>
 							<SavingThrows styles={"h-[24%]"} title={"Saving Throws"} />
 							<Skills styles={"h-[66%]"} title={"Skills"} />
 							<Card styles={"h-[5%]"}>
-								Passive perception: (
-								{skills.find((elem) => elem.index === "perception").value}
-								)
+								Passive perception:
+								<span className=" inline-block px-2 border-b ml-2">
+									{passivePerception < 0
+										? passivePerception
+										: "+" + passivePerception}
+								</span>
 							</Card>
 						</div>
 					</div>
