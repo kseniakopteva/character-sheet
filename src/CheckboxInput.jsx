@@ -8,7 +8,7 @@ export default function CheckboxInput({ id, name, handleChange, children }) {
 				>
 					<input
 						type="checkbox"
-						className="peer h-4 w-4 cursor-pointer transition-all appearance-none rounded hover:shadow-sm border border-slate-300 checked:bg-slate-600 checked:border-slate-600"
+						className="peer h-4 w-4 cursor-pointer transition-all appearance-none bg-white rounded hover:shadow-sm border border-slate-300 checked:bg-slate-600 checked:border-slate-600"
 						id={id}
 						name={name}
 						onChange={handleChange}

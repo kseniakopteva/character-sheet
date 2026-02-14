@@ -9,6 +9,7 @@ import CharacterLevel from "../CharacterLevel";
 import CharacterBackground from "../CharacterBackground";
 import { AbilityScoreContext, CharacterContext, SkillContext } from "../contexts";
 import Card from "../Card";
+import Equipment from "../Equipment";
 
 export const Route = createLazyFileRoute("/")({
 	component: RouteComponent,
@@ -80,7 +81,7 @@ function RouteComponent() {
 								</div>
 							</div>
 							<div className="h-[70%] grid grid-cols-5">
-								<Card styles="col-span-4" title={"Equipment"}></Card>
+								<Equipment styles={"col-span-4"} />
 								<div className="flex flex-col">
 									<Card styles="h-[20%]" title={"CP"}></Card>
 									<Card styles="h-[20%]" title={"SP"}></Card>
@@ -119,7 +120,7 @@ function RouteComponent() {
 					</div>
 				</div>
 			</div>
-			<div className="flex justify-between items-center px-2">
+			<div className="flex justify-between items-center px-2 -mt-1">
 				<p className="text-xs italic">
 					"Character Sheet by KK" is unofficial Fan Content permitted under the
 					Fan Content Policy. Not approved/endorsed by Wizards. Portions of the
