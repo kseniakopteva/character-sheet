@@ -120,7 +120,7 @@ function RouteComponent() {
 					</div>
 				</div>
 			</div>
-			<div className="flex justify-between items-center px-2 -mt-1">
+			<div className="flex justify-between items-center px-2 -mt-6">
 				<p className="text-xs italic">
 					"Character Sheet by KK" is unofficial Fan Content permitted under the
 					Fan Content Policy. Not approved/endorsed by Wizards. Portions of the

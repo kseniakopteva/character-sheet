@@ -1,9 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import { CharacterContext } from "./contexts";
+import { CharacterContext, ChosenEquipmentContext } from "./contexts";
 import Card from "./Card";
 
 export default function CharacterClass({ styles }) {
 	const [characterInfo, setCharacterInfo] = useContext(CharacterContext);
+	const [chosenEquipment, setChosenEquipment] = useContext(ChosenEquipmentContext);
 
 	const [characterClasses, setCharacterClasses] = useState(null);
 
@@ -31,6 +32,7 @@ export default function CharacterClass({ styles }) {
 			...prev,
 			characterClass: characterClasses.find((elem) => elem.name === e.target.value),
 		}));
+		setChosenEquipment([]);
 	}
 
 	if (!characterClasses) {

@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { Outlet, createRootRoute } from "@tanstack/react-router";
-import { CharacterContext, AbilityScoreContext, SkillContext } from "../contexts.jsx";
+import {
+	CharacterContext,
+	AbilityScoreContext,
+	SkillContext,
+	ChosenEquipmentContext,
+} from "../contexts.jsx";
 
 export const Route = createRootRoute({
 	component: RootComponent,
@@ -134,12 +139,15 @@ function RootComponent() {
 			proficiency: false,
 		},
 	]);
+	const chosenEquipmentHook = useState([]);
 	return (
 		<>
 			<CharacterContext value={characterInfoHook}>
 				<AbilityScoreContext value={abilityScoresHook}>
 					<SkillContext value={skillsHook}>
-						<Outlet />
+						<ChosenEquipmentContext value={chosenEquipmentHook}>
+							<Outlet />
+						</ChosenEquipmentContext>
 					</SkillContext>
 				</AbilityScoreContext>
 			</CharacterContext>

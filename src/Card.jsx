@@ -1,4 +1,5 @@
 export default function Card({ styles, title, children }) {
+	// TODO: fix the title moving up while scrolling
 	return (
 		<div
 			className={
