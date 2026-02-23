@@ -28,9 +28,15 @@ export default function CharacterClass({ styles }) {
 	}
 
 	async function selectClass(e) {
+		const chosenClass = characterClasses.find((elem) => elem.name === e.target.value);
+		const proficiencies = chosenClass.proficiencies?.filter(
+			(elem) => elem.index.slice(0, 12) !== "saving-throw",
+		);
+
 		setCharacterInfo((prev) => ({
 			...prev,
-			characterClass: characterClasses.find((elem) => elem.name === e.target.value),
+			characterClass: chosenClass,
+			allProficiencies: proficiencies,
 		}));
 		setChosenEquipment([]);
 	}

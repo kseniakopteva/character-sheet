@@ -77,7 +77,14 @@ function RouteComponent() {
 								</div>
 								<div className="h-[50%] grid grid-cols-2">
 									<Card title={"Hit point maximum"}></Card>
-									<Card title={"Total hit dice"}></Card>
+									<Card
+										styles="text-3xl flex justify-center"
+										title={"Total hit dice"}
+									>
+										<p className="self-center italic">
+											d{characterInfo.characterClass.hit_die}
+										</p>
+									</Card>
 								</div>
 							</div>
 							<div className="h-[70%] grid grid-cols-5">
@@ -114,7 +121,19 @@ function RouteComponent() {
 							</div>
 							<div className="h-[60%] grid grid-cols-2">
 								<Card title={"Features and traits"}></Card>
-								<Card title={"Other proficiencies and languages"}></Card>
+								<Card title={"Other proficiencies and languages"}>
+									<ul className="list-disc ml-5">
+										{characterInfo.characterClass?.proficiencies?.map(
+											(elem) =>
+												elem.index.slice(0, 12) !==
+												"saving-throw" ? (
+													<li key={elem.index}>{elem.name}</li>
+												) : (
+													""
+												),
+										)}
+									</ul>
+								</Card>
 							</div>
 						</div>
 					</div>

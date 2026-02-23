@@ -20,6 +20,7 @@ function RootComponent() {
 		characterLevel: "",
 		characterBackground: "",
 		characterProficiencyBonus: 2,
+		allProficiencies: [],
 	});
 	const abilityScoresHook = useState({
 		str: 8,

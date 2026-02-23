@@ -1,4 +1,11 @@
-export default function CheckboxInput({ id, name, handleChange, children }) {
+export default function CheckboxInput({
+	id,
+	name,
+	handleChange,
+	children,
+	checked,
+	disabled,
+}) {
 	return (
 		<label htmlFor={id} className="block">
 			<div className="inline-flex items-center">
@@ -8,10 +15,12 @@ export default function CheckboxInput({ id, name, handleChange, children }) {
 				>
 					<input
 						type="checkbox"
-						className="peer h-4 w-4 cursor-pointer transition-all appearance-none bg-white rounded hover:shadow-sm border border-slate-300 checked:bg-slate-600 checked:border-slate-600"
+						className="peer h-4 w-4 cursor-pointer transition-all appearance-none bg-white rounded hover:shadow-sm border border-slate-300 checked:bg-slate-600 checked:border-slate-600 disabled:bg-slate-400 disabled:border-slate-400 disabled:cursor-text"
 						id={id}
 						name={name}
 						onChange={handleChange}
+						checked={checked}
+						disabled={disabled}
 					/>
 					<span className="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
 						<svg
