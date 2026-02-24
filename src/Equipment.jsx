@@ -54,11 +54,11 @@ export default function Equipment({ styles }) {
 
 	return (
 		<>
-			<Card styles={"italic overflow-y-scroll " + styles} title={"Equipment"}>
+			<Card styles={"italic overflow-y-auto " + styles} title={"Equipment"}>
 				{startingEquipment.map((elem) => (
 					<p
 						key={elem.equipment.index}
-						className="bg-slate-200 shadow p-1 pl-3 mb-2 rounded text-slate-800"
+						className="bg-slate-200 dark:bg-slate-700 shadow p-1 pl-3 mb-2 rounded text-slate-800 dark:text-slate-300"
 					>
 						{elem.equipment.name}
 					</p>
@@ -69,13 +69,13 @@ export default function Equipment({ styles }) {
 					return (
 						<>
 							<div
-								className="bg-slate-200 shadow p-1 mb-2 rounded"
+								className="bg-slate-200 dark:bg-slate-700 shadow p-1 mb-2 rounded"
 								key={ind}
 							>
 								{choices.length === 1 ? (
 									<p
 										key={ind}
-										className=" pl-3 text-slate-800 first-letter:uppercase"
+										className=" pl-3 text-slate-800 dark:text-slate-300 first-letter:uppercase"
 									>
 										{choices}
 									</p>
@@ -103,7 +103,7 @@ export default function Equipment({ styles }) {
 							{chosenEquipment.find((elem) => elem.groupId === ind) &&
 							chosenEquipment.find((elem) => elem.groupId === ind).text ===
 								"any simple weapon" ? (
-								<p className="ml-3 -m-2 mb-2 mr-3 p-1 text-sm text-slate-600 border border-slate-400 bg-slate-300 border-t-0 rounded-b">
+								<p className="ml-3 -m-2 mb-2 mr-3 p-1 text-sm text-slate-600 dark:text-slate-300 border border-slate-400 bg-slate-300 dark:bg-slate-800 dark:border-slate-900 border-t-0 rounded-b">
 									{chosenEquipment.find((e) => e.groupId === ind).text}:{" "}
 									<br />
 									<ul>

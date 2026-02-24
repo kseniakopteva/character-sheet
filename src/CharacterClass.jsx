@@ -44,7 +44,7 @@ export default function CharacterClass({ styles }) {
 	if (!characterClasses) {
 		return (
 			<Card>
-				<div className="h-full w-full flex items-center justify-center p-1 border-slate-300 border bg-slate-200">
+				<div className="h-full w-full flex items-center justify-center p-1 border-slate-300 border bg-slate-200 dark:border-slate-900 dark:bg-slate-800 dark:text-slate-500">
 					Loading classes ...
 				</div>
 			</Card>
@@ -55,7 +55,7 @@ export default function CharacterClass({ styles }) {
 		<Card className={" h-full w-full" + styles}>
 			<div className="h-full w-full relative">
 				<select
-					className="h-full w-full p-1 pl-2 border-slate-300 border bg-slate-200"
+					className="h-full w-full p-1 pl-2 border-slate-300 border dark:border-slate-900"
 					onChange={(e) => selectClass(e)}
 					value={characterInfo.characterClass.name}
 				>

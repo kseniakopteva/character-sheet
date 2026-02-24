@@ -16,7 +16,7 @@ export default function CharacterLevel({ styles }) {
 	return (
 		<Card className={" h-full w-full" + styles}>
 			<input
-				className="h-full w-full p-2 border-slate-300 border bg-slate-200"
+				className="h-full w-full p-2 border-slate-300 border bg-slate-200 dark:border-slate-900 dark:bg-slate-800"
 				type="text"
 				name="level"
 				id="level"

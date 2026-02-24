@@ -72,7 +72,7 @@ export default function AbilityScores() {
 		const modifier = Math.floor((current - 10) / 2);
 		return (
 			<Card key={index} styles="h-[15.5%] grid grid-cols-3 gap-1" title={index}>
-				<div className="col-span-2 flex items-center justify-center rounded-lg border-slate-300 border mb-4 gap-1">
+				<div className="col-span-2 flex items-center justify-center rounded-lg border-slate-300 dark:border-slate-700 border mb-4 gap-1">
 					<span className="text-2xl">{current}</span>
 					<span className="text-lg">
 						({modifier < 1 ? modifier : "+" + modifier})
@@ -90,7 +90,7 @@ export default function AbilityScores() {
 				<button
 					className={
 						styles +
-						" mb-1 cursor-pointer float-right max-w-8 h-8 p-1 font-black rounded-lg border-slate-300 border bg-slate-200"
+						" mb-1 cursor-pointer float-right max-w-8 h-8 p-1 font-black rounded-lg border-slate-300 border bg-slate-200 dark:border-slate-800 dark:bg-slate-700"
 					}
 					onClick={() => {
 						let newVal = increase ? current + 1 : current - 1;
