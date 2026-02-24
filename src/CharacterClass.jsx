@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { CharacterContext, ChosenEquipmentContext } from "./contexts";
 import Card from "./Card";
+import CharacterSubclass from "./CharacterSubclass";
 
 export default function CharacterClass({ styles }) {
 	const [characterInfo, setCharacterInfo] = useContext(CharacterContext);
@@ -36,6 +37,7 @@ export default function CharacterClass({ styles }) {
 		setCharacterInfo((prev) => ({
 			...prev,
 			characterClass: chosenClass,
+			characterSubclass: null,
 			allProficiencies: proficiencies,
 		}));
 		setChosenEquipment([]);
@@ -43,7 +45,7 @@ export default function CharacterClass({ styles }) {
 
 	if (!characterClasses) {
 		return (
-			<Card>
+			<Card styles={" " + styles}>
 				<div className="h-full w-full flex items-center justify-center p-1 border-slate-300 border bg-slate-200 dark:border-slate-900 dark:bg-slate-800 dark:text-slate-500">
 					Loading classes ...
 				</div>
@@ -52,7 +54,7 @@ export default function CharacterClass({ styles }) {
 	}
 
 	return (
-		<Card className={" h-full w-full" + styles}>
+		<Card styles={" " + styles}>
 			<div className="h-full w-full relative">
 				<select
 					className="h-full w-full p-1 pl-2 border-slate-300 border dark:border-slate-900"

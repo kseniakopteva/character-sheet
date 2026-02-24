@@ -16,8 +16,9 @@ function RootComponent() {
 
 	const characterInfoHook = useState({
 		characterClass: "",
+		characterSubclass: "",
 		characterRace: "",
-		characterLevel: "",
+		characterLevel: 1,
 		characterBackground: "",
 		characterProficiencyBonus: 2,
 		allProficiencies: [],

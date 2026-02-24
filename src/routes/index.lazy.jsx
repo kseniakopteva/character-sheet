@@ -10,6 +10,7 @@ import CharacterBackground from "../CharacterBackground";
 import { AbilityScoreContext, CharacterContext, SkillContext } from "../contexts";
 import Card from "../Card";
 import Equipment from "../Equipment";
+import CharacterSubclass from "../CharacterSubclass";
 
 export const Route = createLazyFileRoute("/")({
 	component: RouteComponent,
@@ -25,6 +26,8 @@ function RouteComponent() {
 	const passiveWisdom = skills.find((elem) => elem.index === "perception").proficiency
 		? mod + characterInfo.characterProficiencyBonus
 		: mod;
+
+	// TODO: move theme stuff to another file
 
 	const [theme, setTheme] = useState(null);
 
@@ -59,7 +62,7 @@ function RouteComponent() {
 	}, [theme]);
 
 	return (
-		<div className="h-full flex flex-col bg-slate-200 dark:bg-slate-800 dark:text-white text-[0.93rem] dark:[scrollbar-color:#475569_#111827]">
+		<div className="h-full flex flex-col bg-slate-200 dark:bg-slate-800 dark:text-white text-[0.93rem] dark:[scrollbar-color:#475569_#111827] ">
 			<div className="grid h-full grid-cols-4 p-8">
 				<div className="h-full flex flex-col">
 					<Card styles={"h-[15%] flex gap-1"}>
@@ -93,11 +96,12 @@ function RouteComponent() {
 					</div>
 				</div>
 				<div className="col-span-3 h-full flex flex-col">
-					<div className="grid h-[7%] grid-cols-4">
-						<CharacterClass />
-						<CharacterRace />
+					<div className="grid h-[7%] grid-cols-9">
+						<CharacterClass styles="col-span-2" />
+						<CharacterSubclass styles="col-span-2"></CharacterSubclass>
+						<CharacterRace styles="col-span-2" />
+						<CharacterBackground styles="col-span-2" />
 						<CharacterLevel />
-						<CharacterBackground />
 					</div>
 					<div className="grid h-[93%] grid-cols-5">
 						<div className="col-span-2 h-full flex flex-col">
@@ -153,7 +157,23 @@ function RouteComponent() {
 								</div>
 							</div>
 							<div className="h-[60%] grid grid-cols-2">
-								<Card title={"Features and traits"}></Card>
+								<Card title={"Features and traits"}>
+									<ul className="ml-2">
+										{characterInfo.characterSubclass?.subclass_levels?.map(
+											(elem) =>
+												elem.level <= characterInfo.characterLevel
+													? elem.features.map((ele) => (
+															<li
+																key={elem.index}
+																className="text-lg italic underline"
+															>
+																{ele.name}
+															</li>
+														))
+													: "",
+										)}
+									</ul>
+								</Card>
 								<Card title={"Other proficiencies and languages"}>
 									<ul className="list-disc ml-5">
 										{characterInfo.characterClass?.proficiencies?.map(

@@ -29,7 +29,7 @@ export default function CharacterRace({ styles }) {
 
 	if (!characterRaces) {
 		return (
-			<Card>
+			<Card styles={" " + styles}>
 				<div className="h-full w-full flex items-center justify-center p-1 border-slate-300 border bg-slate-200 dark:border-slate-900 dark:bg-slate-800 dark:text-slate-500">
 					Loading races ...
 				</div>
@@ -38,7 +38,7 @@ export default function CharacterRace({ styles }) {
 	}
 
 	return (
-		<Card className={" h-full w-full" + styles}>
+		<Card styles={" " + styles}>
 			<select
 				className="h-full w-full p-1 border-slate-300 border dark:border-slate-900"
 				onChange={(e) =>

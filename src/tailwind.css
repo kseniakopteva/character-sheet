@@ -13,7 +13,7 @@ select {
 }
 
 .dark select {
-    background: #1e293b url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'><path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='m19 9-7 7-7-7'/></svg>") no-repeat;
+    background: #1e293b url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'><path stroke='%23e2e8f0' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='m19 9-7 7-7-7'/></svg>") no-repeat;
     background-position: right 5px top 50%;
     appearance: none;
     position: relative;
