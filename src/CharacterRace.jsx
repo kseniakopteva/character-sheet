@@ -1,31 +1,12 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { CharacterContext } from "./contexts";
 import Card from "./Card";
+import races from "./data/races";
 
 export default function CharacterRace({ styles }) {
 	const [characterInfo, setCharacterInfo] = useContext(CharacterContext);
 
-	const [characterRaces, setCharacterRaces] = useState(null);
-
-	useEffect(() => {
-		fetchRaces();
-	}, []);
-
-	async function fetchRaces() {
-		const response = await fetch("https://www.dnd5eapi.co/api/2014/races");
-		let { results } = await response.json();
-		// setCharacterRaces(results);
-
-		let finalRaces = [];
-		for (let i = 0; i < results.length; i++) {
-			const res = await fetch(
-				"https://www.dnd5eapi.co/api/2014/races/" + results[i].index,
-			);
-			let charRace = await res.json();
-			finalRaces.push(charRace);
-		}
-		setCharacterRaces(finalRaces);
-	}
+	const [characterRaces] = useState(races);
 
 	if (!characterRaces) {
 		return (

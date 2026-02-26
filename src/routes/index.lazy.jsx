@@ -11,6 +11,7 @@ import { AbilityScoreContext, CharacterContext, SkillContext } from "../contexts
 import Card from "../Card";
 import Equipment from "../Equipment";
 import CharacterSubclass from "../CharacterSubclass";
+import Features from "../Features";
 
 export const Route = createLazyFileRoute("/")({
 	component: RouteComponent,
@@ -21,11 +22,13 @@ function RouteComponent() {
 	const [characterInfo] = useContext(CharacterContext);
 
 	const [abilityScores] = useContext(AbilityScoreContext);
+	const conMod = Math.floor((abilityScores.con - 10) / 2);
+
 	// TODO: remove modifier calculation from here
-	const mod = Math.floor((abilityScores.wis - 10) / 2);
+	const wisMod = Math.floor((abilityScores.wis - 10) / 2);
 	const passiveWisdom = skills.find((elem) => elem.index === "perception").proficiency
-		? mod + characterInfo.characterProficiencyBonus
-		: mod;
+		? wisMod + characterInfo.characterProficiencyBonus
+		: wisMod;
 
 	// TODO: move theme stuff to another file
 
@@ -62,7 +65,7 @@ function RouteComponent() {
 	}, [theme]);
 
 	return (
-		<div className="h-full flex flex-col bg-slate-200 dark:bg-slate-800 dark:text-white text-[0.93rem] dark:[scrollbar-color:#475569_#111827] ">
+		<div className="h-full flex flex-col bg-slate-200 dark:bg-slate-800 dark:text-white text-[0.93rem] dark:[scrollbar-color:#475569_#111827] [scrollbar-color:#94a3b8_#e2e8f0] ">
 			<div className="grid h-full grid-cols-4 p-8">
 				<div className="h-full flex flex-col">
 					<Card styles={"h-[15%] flex gap-1"}>
@@ -95,7 +98,7 @@ function RouteComponent() {
 						</div>
 					</div>
 				</div>
-				<div className="col-span-3 h-full flex flex-col">
+				<div className="col-span-3 h-full flex flex-col min-h-0">
 					<div className="grid h-[7%] grid-cols-9">
 						<CharacterClass styles="col-span-2" />
 						<CharacterSubclass styles="col-span-2"></CharacterSubclass>
@@ -103,7 +106,7 @@ function RouteComponent() {
 						<CharacterBackground styles="col-span-2" />
 						<CharacterLevel />
 					</div>
-					<div className="grid h-[93%] grid-cols-5">
+					<div className="grid h-[93%] grid-cols-5 min-h-0">
 						<div className="col-span-2 h-full flex flex-col">
 							<div className="h-[30%] flex flex-col">
 								<div className="h-[50%] grid grid-cols-3">
@@ -112,7 +115,29 @@ function RouteComponent() {
 									<Card title={"Speed"}></Card>
 								</div>
 								<div className="h-[50%] grid grid-cols-2">
-									<Card title={"Hit point maximum"}></Card>
+									<Card
+										styles="text-3xl flex justify-center"
+										title={"Hit point maximum"}
+									>
+										<p className="self-center italic">
+											{!characterInfo.characterClass
+												? ""
+												: characterInfo.characterLevel === 1
+													? characterInfo.characterClass
+															.hit_die + conMod
+													: (Math.ceil(
+															(characterInfo.characterClass
+																.hit_die +
+																1) /
+																2,
+														) +
+															conMod) *
+															(characterInfo.characterLevel -
+																1) +
+														characterInfo.characterClass
+															.hit_die}
+										</p>
+									</Card>
 									<Card
 										styles="text-3xl flex justify-center"
 										title={"Total hit dice"}
@@ -135,7 +160,7 @@ function RouteComponent() {
 								</div>
 							</div>
 						</div>
-						<div className="col-span-3 h-full flex flex-col">
+						<div className="col-span-3 h-full flex flex-col min-h-0">
 							<div className="h-[40%] grid grid-cols-8">
 								<Card
 									styles="col-span-7"
@@ -156,24 +181,8 @@ function RouteComponent() {
 									></Card>
 								</div>
 							</div>
-							<div className="h-[60%] grid grid-cols-2">
-								<Card title={"Features and traits"}>
-									<ul className="ml-2">
-										{characterInfo.characterSubclass?.subclass_levels?.map(
-											(elem) =>
-												elem.level <= characterInfo.characterLevel
-													? elem.features.map((ele) => (
-															<li
-																key={elem.index}
-																className="text-lg italic underline"
-															>
-																{ele.name}
-															</li>
-														))
-													: "",
-										)}
-									</ul>
-								</Card>
+							<div className="h-[60%] grid grid-cols-2 min-h-0">
+								<Features />
 								<Card title={"Other proficiencies and languages"}>
 									<ul className="list-disc ml-5">
 										{characterInfo.characterClass?.proficiencies?.map(

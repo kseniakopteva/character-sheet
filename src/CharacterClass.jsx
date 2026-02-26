@@ -1,32 +1,13 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { CharacterContext, ChosenEquipmentContext } from "./contexts";
 import Card from "./Card";
-import CharacterSubclass from "./CharacterSubclass";
+import classes from "./data/classes";
 
 export default function CharacterClass({ styles }) {
 	const [characterInfo, setCharacterInfo] = useContext(CharacterContext);
 	const [chosenEquipment, setChosenEquipment] = useContext(ChosenEquipmentContext);
 
-	const [characterClasses, setCharacterClasses] = useState(null);
-
-	useEffect(() => {
-		fetchClasses();
-	}, []);
-
-	async function fetchClasses() {
-		const response = await fetch("https://www.dnd5eapi.co/api/2014/classes");
-		let { results } = await response.json();
-
-		let finalClasses = [];
-		for (let i = 0; i < results.length; i++) {
-			const res = await fetch(
-				"https://www.dnd5eapi.co/api/2014/classes/" + results[i].index,
-			);
-			let charClass = await res.json();
-			finalClasses.push(charClass);
-		}
-		setCharacterClasses(finalClasses);
-	}
+	const [characterClasses] = useState(classes);
 
 	async function selectClass(e) {
 		const chosenClass = characterClasses.find((elem) => elem.name === e.target.value);

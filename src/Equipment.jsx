@@ -19,7 +19,6 @@ export default function Equipment({ styles }) {
 		let results = await response.json();
 
 		// let nameArray = Array.from(results, (e) => e.index);
-		console.log(results);
 		setSimpleWeaponNameArr(results);
 	}
 
@@ -68,10 +67,7 @@ export default function Equipment({ styles }) {
 					// TODO: make my own API, remove choice length check
 					return (
 						<>
-							<div
-								className="bg-slate-200 dark:bg-slate-700 shadow p-1 mb-2 rounded"
-								key={ind}
-							>
+							<div className="bg-slate-200 dark:bg-slate-700 shadow p-1 mb-2 rounded">
 								{choices.length === 1 ? (
 									<p
 										key={ind}
