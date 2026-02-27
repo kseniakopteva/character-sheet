@@ -6,7 +6,7 @@ export default function Coins() {
 			<Card styles="h-[20%]" title={title}>
 				<div className="h-full flex justify-center items-center">
 					<div
-						className={`rounded-full border-2 h-${size} w-${size} ${classes} flex items-center justify-center opacity-40 dark:opacity-60`}
+						className={`rounded-full border-2 h-${size} w-${size} ${classes} flex items-center justify-center opacity-40 dark:opacity-60 select-none`}
 					>
 						$
 					</div>

@@ -192,7 +192,532 @@ export default [
 				},
 			},
 		],
-		class_levels: "/api/2014/classes/barbarian/levels",
+		class_levels: [
+			{
+				level: 1,
+				ability_score_bonuses: 0,
+				prof_bonus: 2,
+				features: [
+					{
+						index: "rage",
+						name: "Rage",
+						level: 1,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:",
+							},
+							{
+								desc: "- You have advantage on Strength checks and Strength saving throws.",
+							},
+							{
+								desc: "- When you make a melee weapon Attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.",
+							},
+							{
+								desc: "- You have Resistance to bludgeoning, piercing, and slashing damage.",
+							},
+							{
+								desc: "If you are able to cast Spells, you can't cast them or concentrate on them while raging.",
+							},
+							{
+								desc: "Your rage lasts for 1 minute. It ends early if you are knocked Unconscious or if Your Turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on Your Turn as a Bonus Action.",
+							},
+							{
+								desc: "Once you have raged the maximum number of times for your barbarian level, you must finish a Long Rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th.",
+							},
+						],
+					},
+					{
+						index: "barbarian-unarmored-defense",
+						name: "Unarmored Defense",
+						level: 1,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 2,
+					rage_damage_bonus: 2,
+					brutal_critical_dice: 0,
+				},
+			},
+			{
+				level: 2,
+				ability_score_bonuses: 0,
+				prof_bonus: 2,
+				features: [
+					{
+						index: "reckless-attack",
+						name: "Reckless Attack",
+						level: 2,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
+							},
+						],
+					},
+					{
+						index: "danger-sense",
+						name: "Danger Sense",
+						level: 2,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be blinded, deafened, or incapacitated.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 2,
+					rage_damage_bonus: 2,
+					brutal_critical_dice: 0,
+				},
+			},
+			{
+				level: 3,
+				ability_score_bonuses: 0,
+				prof_bonus: 2,
+				features: [
+					{
+						index: "primal-path",
+						name: "Primal Path",
+						level: 3,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 3,
+					rage_damage_bonus: 2,
+					brutal_critical_dice: 0,
+				},
+			},
+			{
+				level: 4,
+				ability_score_bonuses: 1,
+				prof_bonus: 2,
+				features: [
+					{
+						index: "barbarian-ability-score-improvement-1",
+						name: "Ability Score Improvement",
+						level: 4,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 3,
+					rage_damage_bonus: 2,
+					brutal_critical_dice: 0,
+				},
+				index: "barbarian-4",
+			},
+			{
+				level: 5,
+				ability_score_bonuses: 1,
+				prof_bonus: 3,
+				features: [
+					{
+						index: "barbarian-extra-attack",
+
+						name: "Extra Attack",
+						level: 5,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+							},
+						],
+					},
+					{
+						index: "fast-movement",
+						name: "Fast Movement",
+						level: 5,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 3,
+					rage_damage_bonus: 2,
+					brutal_critical_dice: 0,
+				},
+				index: "barbarian-5",
+			},
+			{
+				level: 6,
+				ability_score_bonuses: 1,
+				prof_bonus: 3,
+				features: [
+					{
+						index: "primal-path-improvement-1",
+						name: "Path feature",
+						level: 6,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 4,
+					rage_damage_bonus: 2,
+					brutal_critical_dice: 0,
+				},
+			},
+			{
+				level: 7,
+				ability_score_bonuses: 1,
+				prof_bonus: 3,
+				features: [
+					{
+						index: "feral-instinct",
+						name: "Feral Instinct",
+						level: 7,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
+							},
+							{
+								desc: "Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 4,
+					rage_damage_bonus: 2,
+					brutal_critical_dice: 0,
+				},
+			},
+			{
+				level: 8,
+				ability_score_bonuses: 2,
+				prof_bonus: 3,
+				features: [
+					{
+						index: "barbarian-ability-score-improvement-2",
+						name: "Ability Score Improvement",
+						level: 8,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 4,
+					rage_damage_bonus: 2,
+					brutal_critical_dice: 0,
+				},
+			},
+			{
+				level: 9,
+				ability_score_bonuses: 2,
+				prof_bonus: 4,
+				features: [
+					{
+						index: "brutal-critical-1-die",
+						name: "Brutal Critical (1 die)",
+						level: 9,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 4,
+					rage_damage_bonus: 3,
+					brutal_critical_dice: 1,
+				},
+			},
+			{
+				level: 10,
+				ability_score_bonuses: 2,
+				prof_bonus: 4,
+				features: [
+					{
+						index: "primal-path-improvement-2",
+						name: "Path feature",
+						level: 10,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 4,
+					rage_damage_bonus: 3,
+					brutal_critical_dice: 1,
+				},
+			},
+			{
+				level: 11,
+				ability_score_bonuses: 2,
+				prof_bonus: 4,
+				features: [
+					{
+						index: "relentless-rage",
+						name: "Relentless Rage",
+						level: 11,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
+							},
+							{
+								desc: "Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 4,
+					rage_damage_bonus: 3,
+					brutal_critical_dice: 1,
+				},
+				index: "barbarian-11",
+			},
+			{
+				level: 12,
+				ability_score_bonuses: 3,
+				prof_bonus: 4,
+				features: [
+					{
+						index: "barbarian-ability-score-improvement-3",
+						name: "Ability Score Improvement",
+						level: 12,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 5,
+					rage_damage_bonus: 3,
+					brutal_critical_dice: 1,
+				},
+			},
+			{
+				level: 13,
+				ability_score_bonuses: 3,
+				prof_bonus: 5,
+				features: [
+					{
+						index: "brutal-critical-2-dice",
+						name: "Brutal Critical (2 dice)",
+						level: 13,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 5,
+					rage_damage_bonus: 3,
+					brutal_critical_dice: 2,
+				},
+			},
+			{
+				level: 14,
+				ability_score_bonuses: 3,
+				prof_bonus: 5,
+				features: [
+					{
+						index: "primal-path-improvement-3",
+						name: "Path feature",
+						level: 14,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 5,
+					rage_damage_bonus: 3,
+					brutal_critical_dice: 2,
+				},
+			},
+			{
+				level: 15,
+				ability_score_bonuses: 3,
+				prof_bonus: 5,
+				features: [
+					{
+						index: "persistent-rage",
+						name: "Persistent Rage",
+						level: 15,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 5,
+					rage_damage_bonus: 3,
+					brutal_critical_dice: 2,
+				},
+			},
+			{
+				level: 16,
+				ability_score_bonuses: 4,
+				prof_bonus: 5,
+				features: [
+					{
+						index: "barbarian-ability-score-improvement-4",
+						name: "Ability Score Improvement",
+						level: 16,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 5,
+					rage_damage_bonus: 4,
+					brutal_critical_dice: 2,
+				},
+			},
+			{
+				level: 17,
+				ability_score_bonuses: 4,
+				prof_bonus: 6,
+				features: [
+					{
+						index: "brutal-critical-3-dice",
+						name: "Brutal Critical (3 dice)",
+						level: 17,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 6,
+					rage_damage_bonus: 4,
+					brutal_critical_dice: 3,
+				},
+			},
+			{
+				level: 18,
+				ability_score_bonuses: 4,
+				prof_bonus: 6,
+				features: [
+					{
+						index: "indomitable-might",
+						name: "Indomitable Might",
+						level: 18,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 6,
+					rage_damage_bonus: 4,
+					brutal_critical_dice: 3,
+				},
+				index: "barbarian-18",
+			},
+			{
+				level: 19,
+				ability_score_bonuses: 5,
+				prof_bonus: 6,
+				features: [
+					{
+						index: "barbarian-ability-score-improvement-5",
+						name: "Ability Score Improvement",
+						level: 19,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							},
+						],
+					},
+				],
+				class_specific: {
+					rage_count: 6,
+					rage_damage_bonus: 4,
+					brutal_critical_dice: 3,
+				},
+			},
+			{
+				level: 20,
+				ability_score_bonuses: 5,
+				prof_bonus: 6,
+				features: [
+					{
+						index: "primal-champion",
+						name: "Primal Champion",
+						level: 20,
+						prerequisites: [],
+						desc: [
+							{
+								desc: "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.",
+							},
+						],
+						url: "/api/2014/features/primal-champion",
+						updated_at: "2025-10-24T20:42:13.150Z",
+					},
+				],
+				class_specific: {
+					rage_count: 9999,
+					rage_damage_bonus: 4,
+					brutal_critical_dice: 3,
+				},
+			},
+		],
 		multi_classing: {
 			prerequisites: [
 				{
@@ -879,7 +1404,7 @@ export default [
 				},
 			},
 		],
-		class_levels: "/api/2014/classes/bard/levels",
+		class_levels: "",
 		multi_classing: {
 			prerequisites: [
 				{

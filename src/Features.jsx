@@ -34,7 +34,7 @@ export default function Features() {
 				</button>
 			</div>
 			<ul className="h-full">
-				{characterInfo.characterSubclass?.subclass_levels?.map((elem) =>
+				{characterInfo.characterClass?.class_levels?.map((elem) =>
 					elem.level <= characterInfo.characterLevel
 						? elem.features.map((ele) => {
 								return (
@@ -180,6 +180,197 @@ export default function Features() {
 																	)[0]?.name
 																}
 															</span>
+															{
+																ele.desc.filter((e) =>
+																	!e.name
+																		? ""
+																		: e.index ===
+																			activeIndex[
+																				ele.index
+																			],
+																)[0]?.desc
+															}
+														</p>
+													</>
+												) : (
+													""
+												)}
+											</div>
+										</li>
+									</div>
+								);
+							})
+						: "",
+				)}
+
+				{characterInfo.characterSubclass?.subclass_levels?.map((elem) =>
+					elem.level <= characterInfo.characterLevel
+						? elem.features.map((ele) => {
+								const shouldOpen = isSingleOpen
+									? activeIndex.main && activeIndex.main === ele.index
+									: true;
+								return (
+									<div
+										className="ml-3 mb-1 text-xs/3 italic text-slate-500 dark:text-slate-300 flex gap-1"
+										key={ele.index}
+									>
+										<li key={ele.index}>
+											<button
+												onClick={() => {
+													activeIndex.main &&
+													activeIndex.main === ele.index
+														? setActiveIndex((prev) => ({
+																...prev,
+																main: "none",
+															}))
+														: setActiveIndex((prev) => ({
+																...prev,
+																main: ele.index,
+															}));
+												}}
+											>
+												<div
+													className={
+														isSingleOpen
+															? "flex gap-1 items-center cursor-pointer"
+															: "flex gap-1 items-center"
+													}
+												>
+													<div className="flex text-lg italic text-left">
+														{/* <p className="text-theme-400 text-sm border border-theme-400 px-1 py-0.5 mr-1">
+															{
+																characterInfo
+																	.characterSubclass
+																	.name
+															}
+															:{" "}
+														</p> */}
+														<p className="underline text-theme-400">
+															{ele.name}
+														</p>
+													</div>
+
+													{isSingleOpen ? (
+														activeIndex.main &&
+														activeIndex.main === ele.index ? (
+															<svg
+																xmlns="http://www.w3.org/2000/svg"
+																width="16"
+																height="16"
+																fill="currentColor"
+																viewBox="0 0 16 16"
+															>
+																<path d="M3.204 11h9.592L8 5.519zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659" />
+															</svg>
+														) : (
+															<svg
+																xmlns="http://www.w3.org/2000/svg"
+																width="16"
+																height="16"
+																fill="currentColor"
+																viewBox="0 0 16 16"
+															>
+																<path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659" />
+															</svg>
+														)
+													) : (
+														""
+													)}
+												</div>
+											</button>
+											<br />
+											{!shouldOpen ? (
+												""
+											) : (
+												<p className="text-theme-400 mb-1">
+													[
+													{characterInfo.characterSubclass
+														.subclass_flavor +
+														": " +
+														characterInfo.characterSubclass
+															.name}
+													]
+												</p>
+											)}
+											{ele.desc.map((el) => {
+												return shouldOpen ? (
+													<>
+														{!el.name ? (
+															<>
+																<p className="mb-1">
+																	{el.desc}
+																</p>
+															</>
+														) : (
+															<button
+																className={
+																	activeIndex[
+																		ele.index
+																	] === el.index
+																		? "cursor-pointer border-t border-x p-1 pb-2 rounded-t-sm border-slate-400 dark:border-slate-400 mr-1 mt-1 bg-slate-300 dark:bg-slate-500 text-slate-600 dark:text-slate-100"
+																		: "cursor-pointer border p-1 rounded-sm border-slate-400 dark:border-slate-400 mr-1 mt-1 "
+																}
+																onClick={() => {
+																	activeIndex[
+																		ele.index
+																	] &&
+																	activeIndex[
+																		ele.index
+																	] === el.index
+																		? setActiveIndex(
+																				(
+																					prev,
+																				) => ({
+																					...prev,
+																					[ele.index]:
+																						null,
+																				}),
+																			)
+																		: setActiveIndex(
+																				(
+																					prev,
+																				) => ({
+																					...prev,
+																					[ele.index]:
+																						el.index,
+																				}),
+																			);
+																}}
+															>
+																{el.index.toUpperCase()}
+															</button>
+														)}
+													</>
+												) : (
+													""
+												);
+											})}
+
+											<div>
+												{!(ele.index in activeIndex) ? (
+													""
+												) : (isSingleOpen &&
+														ele.index === activeIndex.main &&
+														activeIndex[ele.index]) ||
+												  (!isSingleOpen &&
+														activeIndex[ele.index]) ? (
+													<>
+														<p className="border border-slate-400 dark:border-slate-400 rounded-b-lg p-1">
+															<span className="font-bold">
+																{
+																	ele.desc.filter(
+																		(e) =>
+																			!e.name
+																				? ""
+																				: e.index ===
+																					activeIndex[
+																						ele
+																							.index
+																					],
+																	)[0]?.name
+																}
+															</span>
+
 															{
 																ele.desc.filter((e) =>
 																	!e.name
