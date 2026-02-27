@@ -3,7 +3,7 @@ import { AbilityScoreContext, CharacterContext, SkillContext } from "./contexts"
 import Card from "./Card";
 import CheckboxInput from "./CheckboxInput";
 
-export default function Skills(props) {
+export default function Skills({ styles, title }) {
 	const [skills, setSkills] = useContext(SkillContext);
 	const [abilityScores] = useContext(AbilityScoreContext);
 	const [characterInfo] = useContext(CharacterContext);
@@ -35,8 +35,8 @@ export default function Skills(props) {
 	}
 
 	return (
-		<Card {...props}>
-			<ul className="w-full">
+		<Card styles={" flex-1 overflow-y-auto min-h-0 " + styles} title={title}>
+			<ul>
 				{skills.map((s) => (
 					<CheckboxInput
 						key={s.index}

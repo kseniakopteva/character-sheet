@@ -89,16 +89,6 @@ export default [
 				name: "Martial Weapons",
 				url: "/api/2014/proficiencies/martial-weapons",
 			},
-			{
-				index: "saving-throw-str",
-				name: "Saving Throw: STR",
-				url: "/api/2014/proficiencies/saving-throw-str",
-			},
-			{
-				index: "saving-throw-con",
-				name: "Saving Throw: CON",
-				url: "/api/2014/proficiencies/saving-throw-con",
-			},
 		],
 		saving_throws: [
 			{
@@ -748,16 +738,6 @@ export default [
 				index: "hand-crossbows",
 				name: "Hand crossbows",
 				url: "/api/2014/proficiencies/hand-crossbows",
-			},
-			{
-				index: "saving-throw-dex",
-				name: "Saving Throw: DEX",
-				url: "/api/2014/proficiencies/saving-throw-dex",
-			},
-			{
-				index: "saving-throw-cha",
-				name: "Saving Throw: CHA",
-				url: "/api/2014/proficiencies/saving-throw-cha",
 			},
 		],
 		saving_throws: [
@@ -1451,16 +1431,6 @@ export default [
 				index: "simple-weapons",
 				name: "Simple Weapons",
 				url: "/api/2014/proficiencies/simple-weapons",
-			},
-			{
-				index: "saving-throw-wis",
-				name: "Saving Throw: WIS",
-				url: "/api/2014/proficiencies/saving-throw-wis",
-			},
-			{
-				index: "saving-throw-cha",
-				name: "Saving Throw: CHA",
-				url: "/api/2014/proficiencies/saving-throw-cha",
 			},
 		],
 		saving_throws: [
@@ -3625,16 +3595,6 @@ export default [
 				name: "Herbalism Kit",
 				url: "/api/2014/proficiencies/herbalism-kit",
 			},
-			{
-				index: "saving-throw-int",
-				name: "Saving Throw: INT",
-				url: "/api/2014/proficiencies/saving-throw-int",
-			},
-			{
-				index: "saving-throw-wis",
-				name: "Saving Throw: WIS",
-				url: "/api/2014/proficiencies/saving-throw-wis",
-			},
 		],
 		saving_throws: [
 			{
@@ -5204,16 +5164,6 @@ export default [
 				name: "Martial Weapons",
 				url: "/api/2014/proficiencies/martial-weapons",
 			},
-			{
-				index: "saving-throw-str",
-				name: "Saving Throw: STR",
-				url: "/api/2014/proficiencies/saving-throw-str",
-			},
-			{
-				index: "saving-throw-con",
-				name: "Saving Throw: CON",
-				url: "/api/2014/proficiencies/saving-throw-con",
-			},
 		],
 		saving_throws: [
 			{
@@ -5817,16 +5767,6 @@ export default [
 				name: "Shortswords",
 				url: "/api/2014/proficiencies/shortswords",
 			},
-			{
-				index: "saving-throw-dex",
-				name: "Saving Throw: DEX",
-				url: "/api/2014/proficiencies/saving-throw-dex",
-			},
-			{
-				index: "saving-throw-str",
-				name: "Saving Throw: STR",
-				url: "/api/2014/proficiencies/saving-throw-str",
-			},
 		],
 		saving_throws: [
 			{
@@ -6042,16 +5982,6 @@ export default [
 				index: "martial-weapons",
 				name: "Martial Weapons",
 				url: "/api/2014/proficiencies/martial-weapons",
-			},
-			{
-				index: "saving-throw-wis",
-				name: "Saving Throw: WIS",
-				url: "/api/2014/proficiencies/saving-throw-wis",
-			},
-			{
-				index: "saving-throw-cha",
-				name: "Saving Throw: CHA",
-				url: "/api/2014/proficiencies/saving-throw-cha",
 			},
 		],
 		saving_throws: [
@@ -6407,16 +6337,6 @@ export default [
 				index: "martial-weapons",
 				name: "Martial Weapons",
 				url: "/api/2014/proficiencies/martial-weapons",
-			},
-			{
-				index: "saving-throw-dex",
-				name: "Saving Throw: DEX",
-				url: "/api/2014/proficiencies/saving-throw-dex",
-			},
-			{
-				index: "saving-throw-str",
-				name: "Saving Throw: STR",
-				url: "/api/2014/proficiencies/saving-throw-str",
 			},
 		],
 		saving_throws: [
@@ -6849,16 +6769,6 @@ export default [
 				name: "Thieves' Tools",
 				url: "/api/2014/proficiencies/thieves-tools",
 			},
-			{
-				index: "saving-throw-dex",
-				name: "Saving Throw: DEX",
-				url: "/api/2014/proficiencies/saving-throw-dex",
-			},
-			{
-				index: "saving-throw-int",
-				name: "Saving Throw: INT",
-				url: "/api/2014/proficiencies/saving-throw-int",
-			},
 		],
 		saving_throws: [
 			{
@@ -7231,16 +7141,6 @@ export default [
 				name: "Crossbows, light",
 				url: "/api/2014/proficiencies/crossbows-light",
 			},
-			{
-				index: "saving-throw-con",
-				name: "Saving Throw: CON",
-				url: "/api/2014/proficiencies/saving-throw-con",
-			},
-			{
-				index: "saving-throw-cha",
-				name: "Saving Throw: CHA",
-				url: "/api/2014/proficiencies/saving-throw-cha",
-			},
 		],
 		saving_throws: [
 			{
@@ -7530,16 +7430,6 @@ export default [
 				index: "simple-weapons",
 				name: "Simple Weapons",
 				url: "/api/2014/proficiencies/simple-weapons",
-			},
-			{
-				index: "saving-throw-wis",
-				name: "Saving Throw: WIS",
-				url: "/api/2014/proficiencies/saving-throw-wis",
-			},
-			{
-				index: "saving-throw-cha",
-				name: "Saving Throw: CHA",
-				url: "/api/2014/proficiencies/saving-throw-cha",
 			},
 		],
 		saving_throws: [
@@ -7870,16 +7760,6 @@ export default [
 				index: "crossbows-light",
 				name: "Crossbows, light",
 				url: "/api/2014/proficiencies/crossbows-light",
-			},
-			{
-				index: "saving-throw-int",
-				name: "Saving Throw: INT",
-				url: "/api/2014/proficiencies/saving-throw-int",
-			},
-			{
-				index: "saving-throw-wis",
-				name: "Saving Throw: WIS",
-				url: "/api/2014/proficiencies/saving-throw-wis",
 			},
 		],
 		saving_throws: [

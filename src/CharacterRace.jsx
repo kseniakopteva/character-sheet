@@ -21,15 +21,17 @@ export default function CharacterRace({ styles }) {
 	return (
 		<Card styles={" " + styles}>
 			<select
-				className="h-full w-full p-1 border-slate-300 border dark:border-slate-900"
-				onChange={(e) =>
-					setCharacterInfo({
-						...characterInfo,
-						characterRace: characterRaces.find(
-							(elem) => elem.name === e.target.value,
-						),
-					})
-				}
+				className="h-full w-full p-1 border-slate-300 border dark:border-slate-900 rounded-xs focus:ring-2 focus:ring-theme-500 focus:outline-none dark:ring-1 dark:ring-white/5 dark:focus:ring-2 dark:focus:ring-theme-500"
+				onChange={(e) => {
+					e.target.value
+						? setCharacterInfo({
+								...characterInfo,
+								characterRace: characterRaces.find(
+									(elem) => elem.name === e.target.value,
+								),
+							})
+						: false;
+				}}
 				value={characterInfo.characterRace.name}
 			>
 				<option value="" selected="selected"></option>

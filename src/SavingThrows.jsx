@@ -3,7 +3,7 @@ import Card from "./Card";
 import CheckboxInput from "./CheckboxInput";
 import { AbilityScoreContext, CharacterContext } from "./contexts";
 
-export default function SavingThrows(props) {
+export default function SavingThrows({ styles, title }) {
 	const [abilityScores] = useContext(AbilityScoreContext);
 	const [characterInfo] = useContext(CharacterContext);
 
@@ -112,8 +112,8 @@ export default function SavingThrows(props) {
 	}
 
 	return (
-		<Card {...props}>
-			<ul>
+		<Card styles={"overflow-y-auto " + styles} title={title}>
+			<ul className="h-full">
 				{savingThrows.map((s) => (
 					<CheckboxInput
 						key={s.index}

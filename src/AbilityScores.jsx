@@ -39,7 +39,7 @@ export default function AbilityScores() {
 	];
 
 	return (
-		<div className="flex flex-col text-sm">
+		<div className="flex flex-col text-sm overflow-y-auto overflow-x-hidden">
 			<Card styles="h-[7%]">
 				<span>Points: {totalPoints}/27</span>
 				<br />
@@ -71,8 +71,12 @@ export default function AbilityScores() {
 		// TODO: move modifier calculation in one place
 		const modifier = Math.floor((current - 10) / 2);
 		return (
-			<Card key={index} styles="h-[15.5%] grid grid-cols-3 gap-1" title={index}>
-				<div className="col-span-2 flex items-center justify-center rounded-lg border-slate-300 dark:border-slate-700 border mb-4 gap-1">
+			<Card
+				key={index}
+				styles="h-[15.5%] min-h-[80px] grid grid-cols-3 gap-1"
+				title={index}
+			>
+				<div className="col-span-2 flex items-center justify-center flex-wrap  rounded-lg border-slate-300 dark:border-slate-700 border mb-4 gap-1">
 					<span className="text-2xl">{current}</span>
 					<span className="text-lg">
 						({modifier < 1 ? modifier : "+" + modifier})
@@ -90,7 +94,7 @@ export default function AbilityScores() {
 				<button
 					className={
 						styles +
-						" mb-1 cursor-pointer float-right max-w-8 h-8 p-1 font-black rounded-lg border-slate-300 border bg-slate-200 dark:border-slate-800 dark:bg-slate-700"
+						" mb-1 cursor-pointer float-right max-w-8 max-h-8 p-1 font-black rounded-lg border-slate-300 border bg-slate-200 dark:border-slate-800 dark:bg-slate-700"
 					}
 					onClick={() => {
 						let newVal = increase ? current + 1 : current - 1;

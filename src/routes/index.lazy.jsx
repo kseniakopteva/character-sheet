@@ -12,6 +12,7 @@ import Card from "../Card";
 import Equipment from "../Equipment";
 import CharacterSubclass from "../CharacterSubclass";
 import Features from "../Features";
+import Coins from "../Coins";
 
 export const Route = createLazyFileRoute("/")({
 	component: RouteComponent,
@@ -65,20 +66,20 @@ function RouteComponent() {
 	}, [theme]);
 
 	return (
-		<div className="h-full flex flex-col bg-slate-200 dark:bg-slate-800 dark:text-white text-[0.93rem] dark:[scrollbar-color:#475569_#111827] [scrollbar-color:#94a3b8_#e2e8f0] ">
+		<div className="selection:bg-theme-500 selection:text-white h-full flex flex-col bg-slate-200 dark:bg-slate-800 dark:text-white text-[0.93rem] dark:[scrollbar-color:#475569_#111827] [scrollbar-color:#94a3b8_#e2e8f0] ">
 			<div className="grid h-full grid-cols-4 p-8">
-				<div className="h-full flex flex-col">
-					<Card styles={"h-[15%] flex gap-1"}>
+				<div className="h-full flex flex-col min-h-0">
+					<Card styles={"max-h-[15%] flex gap-1"}>
 						<img
-							className="border border-slate-400 dark:border-slate-900 rounded-sm"
+							className="h-full max-w-15 border border-slate-400 dark:border-slate-900 rounded-sm"
 							src="https://placehold.co/100"
 							alt="Character Appearance"
 						/>
 						<div className="col-span-2">Character Name</div>
 					</Card>
-					<div className="grid h-[85%] grid-cols-3">
+					<div className="grow grid h-[85%] grid-cols-3 min-h-0">
 						<AbilityScores />
-						<div className="h-full col-span-2 flex flex-col">
+						<div className="h-full col-span-2 flex flex-col min-h-0">
 							<Card styles={"h-[5%] flex items-center"}>
 								<span className=" inline-block px-2 border-b mr-2">
 									+{characterInfo.characterProficiencyBonus}
@@ -99,14 +100,14 @@ function RouteComponent() {
 					</div>
 				</div>
 				<div className="col-span-3 h-full flex flex-col min-h-0">
-					<div className="grid h-[7%] grid-cols-9">
+					<div className="grid fmin-h-[5%] fmax-h-[7%] grid-cols-9 ">
 						<CharacterClass styles="col-span-2" />
 						<CharacterSubclass styles="col-span-2"></CharacterSubclass>
 						<CharacterRace styles="col-span-2" />
 						<CharacterBackground styles="col-span-2" />
 						<CharacterLevel />
 					</div>
-					<div className="grid h-[93%] grid-cols-5 min-h-0">
+					<div className="grid h-full grid-cols-5 min-h-0">
 						<div className="col-span-2 h-full flex flex-col">
 							<div className="h-[30%] flex flex-col">
 								<div className="h-[50%] grid grid-cols-3">
@@ -151,13 +152,7 @@ function RouteComponent() {
 							</div>
 							<div className="h-[70%] grid grid-cols-5">
 								<Equipment styles={"col-span-4"} />
-								<div className="flex flex-col">
-									<Card styles="h-[20%]" title={"CP"}></Card>
-									<Card styles="h-[20%]" title={"SP"}></Card>
-									<Card styles="h-[20%]" title={"EP"}></Card>
-									<Card styles="h-[20%]" title={"GP"}></Card>
-									<Card styles="h-[20%]" title={"PP"}></Card>
-								</div>
+								<Coins />
 							</div>
 						</div>
 						<div className="col-span-3 h-full flex flex-col min-h-0">
@@ -183,30 +178,50 @@ function RouteComponent() {
 							</div>
 							<div className="h-[60%] grid grid-cols-2 min-h-0">
 								<Features />
-								<Card title={"Other proficiencies and languages"}>
-									<ul className="list-disc ml-5">
-										{characterInfo.characterClass?.proficiencies?.map(
-											(elem) =>
-												elem.index.slice(0, 12) !==
-												"saving-throw" ? (
-													<li
-														className="italic"
-														key={elem.index}
-													>
-														{elem.name}
-													</li>
-												) : (
-													""
-												),
-										)}
-									</ul>
+								<Card
+									styles=""
+									title={"Other proficiencies and languages"}
+								>
+									<div className="h-full min-h-0 grid grid-cols-2">
+										<div>
+											<ul className="list-disc ml-5">
+												{characterInfo.characterClass?.proficiencies?.map(
+													(elem) => (
+														<li
+															className="italic"
+															key={elem.index}
+														>
+															{elem.name}
+														</li>
+													),
+												)}
+											</ul>
+										</div>
+										<div className="border border-slate-300 dark:border-slate-500 rounded-md">
+											<h3 className="pl-1 italic text-slate-500 dark:text-slate-400">
+												Languages
+											</h3>
+											<ul className="list-disc ml-5">
+												{characterInfo.characterRace?.languages?.map(
+													(elem) => (
+														<li
+															className="italic"
+															key={elem.index}
+														>
+															{elem.name}
+														</li>
+													),
+												)}
+											</ul>
+										</div>
+									</div>
 								</Card>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="flex justify-between items-center px-2 -mt-6 dark:text-slate-400">
+			<div className="flex justify-between items-center px-2 -mt-6 text-slate-600 dark:text-slate-400">
 				<p className="text-xs italic">
 					"Character Sheet by KK" is unofficial Fan Content permitted under the
 					Fan Content Policy. Not approved/endorsed by Wizards. Portions of the

@@ -21,7 +21,7 @@ export default function CharacterSubclass({ styles }) {
 	if (!currSubclasses) {
 		return (
 			<Card styles={" " + styles}>
-				<div className="h-full w-full flex items-center justify-center p-1 dark:text-slate-400">
+				<div className="h-full w-full flex items-center justify-center p-1 text-center text-slate-400 dark:text-slate-400">
 					Pick a class for subclasses to appear
 				</div>
 			</Card>
@@ -33,7 +33,7 @@ export default function CharacterSubclass({ styles }) {
 			<div className="h-full w-full relative wrap-break-word">
 				<select
 					title={characterInfo.characterSubclass?.desc}
-					className="h-full w-full p-1 pl-2 border-slate-300 border dark:border-slate-900"
+					className="h-full w-full p-1 pl-2 border-slate-300 border dark:border-slate-900 rounded-xs focus:ring-2 focus:ring-theme-500 focus:outline-none dark:ring-1 dark:ring-white/5 dark:focus:ring-2 dark:focus:ring-theme-500"
 					onChange={(e) => selectSubclass(e)}
 					value={
 						characterInfo.characterSubclass?.subclass_flavor +
