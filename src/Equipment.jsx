@@ -106,7 +106,7 @@ export default function Equipment({ styles }) {
 										{simpleWeaponNameArr.equipment.map((e) => (
 											<>
 												<li
-													className="list-disc ml-5"
+													className="list-disc marker:text-slate-600 ml-5"
 													key={e.index}
 												>
 													{e.index}

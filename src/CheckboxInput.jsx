@@ -15,7 +15,7 @@ export default function CheckboxInput({
 				>
 					<input
 						type="checkbox"
-						className="peer h-4 w-4 cursor-pointer transition-all appearance-none bg-white dark:bg-slate-600 rounded hover:shadow-sm border border-slate-300 dark:border-slate-700 checked:bg-slate-600 checked:border-slate-600 dark:checked:border-slate-200 dark:checked:bg-slate-200 disabled:bg-slate-400 disabled:border-slate-400 dark:disabled:checked:border-slate-400 dark:disabled:checked:bg-slate-400 disabled:cursor-text"
+						className="peer h-4 w-4 cursor-pointer transition-all appearance-none bg-white dark:bg-slate-600 rounded hover:shadow-sm dark:shadow-slate-500 dark:hover:border-slate-500 border border-slate-300 dark:border-slate-700 checked:bg-slate-600 checked:border-slate-600 dark:checked:border-slate-200 dark:checked:bg-slate-200 disabled:bg-slate-400 disabled:border-slate-400 dark:disabled:checked:border-slate-400 dark:disabled:checked:bg-slate-400 disabled:cursor-text"
 						id={id}
 						name={name}
 						onChange={handleChange}
@@ -40,7 +40,7 @@ export default function CheckboxInput({
 					</span>
 				</label>
 				<label
-					className="cursor-pointer ml-2 text-slate-800 dark:text-slate-300 text-sm"
+					className="cursor-pointer ml-2 text-slate-800 dark:text-slate-200 text-sm hover:text-slate-500 dark:hover:text-slate-50"
 					htmlFor={id}
 				>
 					{children}

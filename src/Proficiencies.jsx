@@ -9,7 +9,7 @@ export default function Proficiencies() {
 		<Card styles="" title={"Other proficiencies and languages"}>
 			<div className="h-full min-h-0 grid grid-cols-2">
 				<div>
-					<ul className="list-disc ml-5">
+					<ul className="list-disc marker:text-slate-400 ml-5">
 						{characterInfo.characterClass?.proficiencies?.map((elem) => (
 							<li className="italic" key={elem.index}>
 								{elem.name}
@@ -21,7 +21,7 @@ export default function Proficiencies() {
 					<h3 className="pl-1 italic text-slate-500 dark:text-slate-400">
 						Languages
 					</h3>
-					<ul className="list-disc ml-5">
+					<ul className="list-disc marker:text-slate-400 ml-5">
 						{characterInfo.characterRace?.languages?.map((elem) => (
 							<li className="italic" key={elem.index}>
 								{elem.name}

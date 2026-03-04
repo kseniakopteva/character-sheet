@@ -9,7 +9,7 @@ export default function RadioInput({ id, name, handleChange, checked, children }
 					name={name}
 					type="radio"
 					className={
-						"peer h-4 w-4 cursor-pointer appearance-none rounded-full bg-white border border-slate-300 checked:border-slate-400 dark:checked:border-slate-400 transition-all dark:bg-slate-600 dark:border-slate-700 disabled:cursor-text"
+						"peer h-4 w-4 cursor-pointer appearance-none rounded-full bg-white border border-slate-300 checked:border-slate-400 hover:shadow-sm dark:shadow-slate-500 dark:hover:border-slate-500 dark:checked:border-slate-400 transition-all dark:bg-slate-600 dark:border-slate-700 disabled:cursor-text"
 					}
 					id={id}
 					onChange={(name) => handleChange(name, children)}

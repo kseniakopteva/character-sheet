@@ -25,7 +25,7 @@ export const Route = createLazyFileRoute("/")({
 
 function RouteComponent() {
 	return (
-		<div className="selection:bg-theme-500 selection:text-white h-full flex flex-col bg-slate-200 dark:bg-slate-800 dark:text-white text-[0.93rem] dark:[scrollbar-color:#475569_#111827] [scrollbar-color:#94a3b8_#e2e8f0] ">
+		<div className="selection:bg-slate-500 selection:text-white dark:selection:bg-slate-100 dark:selection:text-slate-600 h-full flex flex-col bg-slate-200 dark:bg-slate-800 dark:text-white text-[0.93rem] dark:[scrollbar-color:#475569_#111827] [scrollbar-color:#94a3b8_#e2e8f0] ">
 			<div className="grid h-full grid-cols-4 p-8">
 				<div className="h-full flex flex-col min-h-0">
 					<PersonalInfo />

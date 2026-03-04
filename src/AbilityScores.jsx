@@ -91,7 +91,7 @@ export default function AbilityScores() {
 				<button
 					className={
 						styles +
-						" mb-1 cursor-pointer float-right max-w-8 max-h-8 p-1 font-black rounded-lg border-slate-300 border bg-slate-200 dark:border-slate-800 dark:bg-slate-700"
+						" mb-1 cursor-pointer float-right max-w-8 max-h-8 p-1 font-black rounded-lg border-slate-300 border bg-slate-200 hover:bg-slate-300 hover:border-slate-400 dark:border-slate-800 dark:bg-slate-700  dark:hover:bg-slate-500  dark:hover:border-slate-700"
 					}
 					onClick={() => {
 						let newVal = increase ? current + 1 : current - 1;

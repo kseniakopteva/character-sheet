@@ -237,7 +237,7 @@ export default function Features() {
 													}
 												>
 													<div className="flex text-lg italic text-left">
-														{/* <p className="text-theme-400 text-sm border border-theme-400 px-1 py-0.5 mr-1">
+														{/* <p className="text-slate-400 text-sm border border-slate-400 px-1 py-0.5 mr-1">
 															{
 																characterInfo
 																	.characterSubclass
@@ -245,9 +245,14 @@ export default function Features() {
 															}
 															:{" "}
 														</p> */}
-														<p className="underline text-theme-400">
-															{ele.name}
-														</p>
+														<div className="flex gap-1 items-center">
+															<div className="bg-slate-300 dark:bg-slate-500 p-0.5 mr-1 rounded-sm text-xs">
+																subclass
+															</div>
+															<p className="underline">
+																{ele.name}
+															</p>
+														</div>
 													</div>
 
 													{isSingleOpen ? (
@@ -282,7 +287,7 @@ export default function Features() {
 											{!shouldOpen ? (
 												""
 											) : (
-												<p className="text-theme-400 mb-1">
+												<p className="text-slate-400 mb-1">
 													[
 													{characterInfo.characterSubclass
 														.subclass_flavor +
