@@ -2,20 +2,21 @@ import { useContext } from "react";
 import Card from "./Card";
 import { AbilityScoreContext, CharacterContext } from "./contexts";
 import Insert from "./Insert";
+import { calculateModifier } from "./formulas";
 
 export default function Stats() {
 	const [characterInfo] = useContext(CharacterContext);
 
 	const [abilityScores] = useContext(AbilityScoreContext);
-	const conMod = Math.floor((abilityScores.con - 10) / 2);
-	const dexMod = Math.floor((abilityScores.dex - 10) / 2);
+	const conMod = calculateModifier(abilityScores.con);
+	const initiative = calculateModifier(abilityScores.dex, false, "string");
 
 	return (
 		<div className="h-[30%] flex flex-col">
 			<div className="h-[50%] grid grid-cols-3">
 				<Card title={"Armor Class"}></Card>
 				<Card title={"Initiative"}>
-					<Insert title={dexMod > 0 ? "+" + dexMod : dexMod}></Insert>
+					<Insert title={initiative}></Insert>
 				</Card>
 				<Card
 					styles="flex flex-col justify-center items-center italic"

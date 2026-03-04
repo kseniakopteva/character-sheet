@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Card from "./Card";
 import CheckboxInput from "./CheckboxInput";
 import { AbilityScoreContext, CharacterContext } from "./contexts";
+import { calculateModifier } from "./formulas";
 
 export default function SavingThrows({ styles, title }) {
 	const [abilityScores] = useContext(AbilityScoreContext);
@@ -102,15 +103,6 @@ export default function SavingThrows({ styles, title }) {
 		);
 	}
 
-	function modifier(savingThrow) {
-		if (savingThrow.proficiency)
-			return (
-				Math.floor((abilityScores[savingThrow.index.slice(0, 3)] - 10) / 2) +
-				characterInfo.characterProficiencyBonus
-			);
-		return Math.floor((abilityScores[savingThrow.index.slice(0, 3)] - 10) / 2);
-	}
-
 	return (
 		<Card styles={"overflow-y-auto " + styles} title={title}>
 			<ul className="h-full">
@@ -124,7 +116,11 @@ export default function SavingThrows({ styles, title }) {
 						disabled={s.fixed}
 					>
 						<span className="inline-block w-6 text-center px-1 mr-1 border-b">
-							{modifier(s) < 1 ? modifier(s) : "+" + modifier(s)}
+							{calculateModifier(
+								abilityScores[s.index.slice(0, 3)],
+								s.proficiency,
+								"string",
+							)}
 						</span>
 						{s.name}
 					</CheckboxInput>

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AbilityScoreContext, SkillContext } from "./contexts";
 import Card from "./Card";
+import { calculateModifier } from "./formulas";
 
 export default function AbilityScores() {
 	const [totalPoints, setTotalPoints] = useState(27);
@@ -10,9 +11,7 @@ export default function AbilityScores() {
 
 	function setSkillValues(value, base) {
 		const filteredSkills = skills.filter((elem) => elem.base === base);
-		// TODO: move modifier in one place/ make it a field in ability score hook
-		const modifier = Math.floor((value - 10) / 2);
-		filteredSkills.map((elem) => (elem.value = modifier));
+		filteredSkills.map((elem) => (elem.value = calculateModifier(value)));
 	}
 
 	// TODO: remove the array with the ability score full names, put them inside the hook
@@ -68,8 +67,6 @@ export default function AbilityScores() {
 
 	function abilityComponent(index) {
 		const current = abilityScores[index.slice(0, 3)];
-		// TODO: move modifier calculation in one place
-		const modifier = Math.floor((current - 10) / 2);
 		return (
 			<Card
 				key={index}
@@ -79,7 +76,7 @@ export default function AbilityScores() {
 				<div className="col-span-2 flex items-center justify-center flex-wrap  rounded-lg border-slate-300 dark:border-slate-700 border mb-4 gap-1">
 					<span className="text-2xl">{current}</span>
 					<span className="text-lg">
-						({modifier < 1 ? modifier : "+" + modifier})
+						({calculateModifier(current, false, "string")})
 					</span>
 				</div>
 				<div className="gap-1 w-full">

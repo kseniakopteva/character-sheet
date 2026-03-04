@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { AbilityScoreContext, CharacterContext, SkillContext } from "./contexts";
+import { AbilityScoreContext, SkillContext } from "./contexts";
 import Card from "./Card";
 import CheckboxInput from "./CheckboxInput";
+import { calculateModifier } from "./formulas";
 
 export default function Skills({ styles, title }) {
 	const [skills, setSkills] = useContext(SkillContext);
 	const [abilityScores] = useContext(AbilityScoreContext);
-	const [characterInfo] = useContext(CharacterContext);
 
 	// TODO: remove repeating onCheckChange
 
@@ -23,17 +23,6 @@ export default function Skills({ styles, title }) {
 		);
 	}
 
-	// TODO: move modifier in one place/ make it a field in ability score hook
-
-	function modifier(skill) {
-		if (skill.proficiency)
-			return (
-				Math.floor((abilityScores[skill.base.slice(0, 3)] - 10) / 2) +
-				characterInfo.characterProficiencyBonus
-			);
-		return Math.floor((abilityScores[skill.base.slice(0, 3)] - 10) / 2);
-	}
-
 	return (
 		<Card styles={" flex-1 overflow-y-auto min-h-0 " + styles} title={title}>
 			<ul>
@@ -45,7 +34,11 @@ export default function Skills({ styles, title }) {
 						handleChange={onCheckChange}
 					>
 						<span className="inline-block w-6 text-center px-1 mr-1 border-b">
-							{modifier(s) < 1 ? modifier(s) : "+" + modifier(s)}
+							{calculateModifier(
+								abilityScores[s.base.slice(0, 3)],
+								s.proficiency,
+								"string",
+							)}
 						</span>
 						{s.name}
 					</CheckboxInput>
