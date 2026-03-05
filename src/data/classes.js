@@ -205,25 +205,25 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:",
+								body: "In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren't wearing heavy armor:",
 							},
 							{
-								desc: "- You have advantage on Strength checks and Strength saving throws.",
+								body: "- You have advantage on Strength checks and Strength saving throws.",
 							},
 							{
-								desc: "- When you make a melee weapon Attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.",
+								body: "- When you make a melee weapon Attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.",
 							},
 							{
-								desc: "- You have Resistance to bludgeoning, piercing, and slashing damage.",
+								body: "- You have Resistance to bludgeoning, piercing, and slashing damage.",
 							},
 							{
-								desc: "If you are able to cast Spells, you can't cast them or concentrate on them while raging.",
+								body: "If you are able to cast Spells, you can't cast them or concentrate on them while raging.",
 							},
 							{
-								desc: "Your rage lasts for 1 minute. It ends early if you are knocked Unconscious or if Your Turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on Your Turn as a Bonus Action.",
+								body: "Your rage lasts for 1 minute. It ends early if you are knocked Unconscious or if Your Turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on Your Turn as a Bonus Action.",
 							},
 							{
-								desc: "Once you have raged the maximum number of times for your barbarian level, you must finish a Long Rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th.",
+								body: "Once you have raged the maximum number of times for your barbarian level, you must finish a Long Rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th.",
 							},
 						],
 					},
@@ -234,7 +234,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.",
+								body: "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.",
 							},
 						],
 					},
@@ -257,7 +257,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
+								body: "Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.",
 							},
 						],
 					},
@@ -268,7 +268,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be blinded, deafened, or incapacitated.",
+								body: "At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be blinded, deafened, or incapacitated.",
 							},
 						],
 					},
@@ -291,7 +291,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
+								body: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
 							},
 						],
 					},
@@ -314,7 +314,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+								body: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							},
 						],
 					},
@@ -339,7 +339,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+								body: "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
 							},
 						],
 					},
@@ -350,7 +350,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor.",
+								body: "Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor.",
 							},
 						],
 					},
@@ -374,7 +374,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
+								body: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
 							},
 						],
 					},
@@ -397,10 +397,10 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
+								body: "By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
 							},
 							{
-								desc: "Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.",
+								body: "Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.",
 							},
 						],
 					},
@@ -423,7 +423,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+								body: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							},
 						],
 					},
@@ -446,7 +446,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
+								body: "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
 							},
 						],
 					},
@@ -469,7 +469,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
+								body: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
 							},
 						],
 					},
@@ -492,10 +492,10 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
+								body: "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
 							},
 							{
-								desc: "Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.",
+								body: "Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.",
 							},
 						],
 					},
@@ -519,7 +519,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+								body: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							},
 						],
 					},
@@ -542,7 +542,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
+								body: "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
 							},
 						],
 					},
@@ -565,7 +565,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
+								body: "At 3rd level, you choose a path that shapes the nature of your rage. Choose the Path of the Berserker or the Path of the Totem Warrior, both detailed at the end of the class description. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
 							},
 						],
 					},
@@ -588,7 +588,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.",
+								body: "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.",
 							},
 						],
 					},
@@ -611,7 +611,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+								body: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							},
 						],
 					},
@@ -634,7 +634,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
+								body: "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack. This increases to two additional dice at 13th level and three additional dice at 17th level.",
 							},
 						],
 					},
@@ -657,7 +657,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",
+								body: "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.",
 							},
 						],
 					},
@@ -681,7 +681,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+								body: "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							},
 						],
 					},
@@ -704,7 +704,7 @@ export default [
 						prerequisites: [],
 						desc: [
 							{
-								desc: "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.",
+								body: "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.",
 							},
 						],
 						url: "/api/2014/features/primal-champion",
@@ -765,7 +765,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion (as described in appendix A).",
+										body: "Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion (as described in appendix A).",
 									},
 								],
 							},
@@ -781,7 +781,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Beginning at 6th level, you can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.",
+										body: "Beginning at 6th level, you can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.",
 									},
 								],
 							},
@@ -797,10 +797,10 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
+										body: "Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
 									},
 									{
-										desc: " If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours.",
+										body: " If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours.",
 									},
 								],
 							},
@@ -816,7 +816,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon Attack against that creature.",
+										body: "Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon Attack against that creature.",
 									},
 								],
 							},
@@ -843,7 +843,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the beast sense and speak with animals spells, but only as rituals, as described in chapter 10.",
+										body: "Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the beast sense and speak with animals spells, but only as rituals, as described in chapter 10.",
 									},
 								],
 							},
@@ -853,10 +853,10 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object—an amulet or similar adornment—that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
+										body: "At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object—an amulet or similar adornment—that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
 									},
 									{
-										desc: "Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.",
+										body: "Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.",
 									},
 									{
 										index: "bear",
@@ -866,22 +866,22 @@ export default [
 									{
 										index: "eagle",
 										name: "Eagle. ",
-										desc: "While you're raging and aren't wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the Dash action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease.",
+										body: "While you're raging and aren't wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the Dash action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease.",
 									},
 									{
 										index: "elk",
 										name: "Elk. ",
-										desc: "While you're raging and aren't wearing heavy armor, your walking speed increases by 15 feet. The spirit of the elk makes you extraordinarily swift.",
+										body: "While you're raging and aren't wearing heavy armor, your walking speed increases by 15 feet. The spirit of the elk makes you extraordinarily swift.",
 									},
 									{
 										index: "tiger",
 										name: "Tiger. ",
-										desc: "While raging, you can add 10 feet to your long jump distance and 3 feet to your high jump distance. The spirit of the tiger empowers your leaps.",
+										body: "While raging, you can add 10 feet to your long jump distance and 3 feet to your high jump distance. The spirit of the tiger empowers your leaps.",
 									},
 									{
 										index: "wolf",
 										name: "Wolf.",
-										desc: "While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters.",
+										body: "While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters.",
 									},
 								],
 							},
@@ -895,32 +895,32 @@ export default [
 								name: "Aspect of the Beast",
 								desc: [
 									{
-										desc: "At 6th level, you gain a magical benefit based on the totem animal of your choice. You can choose the same animal you selected at 3rd level or a different one.",
+										body: "At 6th level, you gain a magical benefit based on the totem animal of your choice. You can choose the same animal you selected at 3rd level or a different one.",
 									},
 									{
 										index: "bear",
 										name: "Bear.",
-										desc: "You gain the might of a bear. Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects.",
+										body: "You gain the might of a bear. Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects.",
 									},
 									{
 										index: "eagle",
 										name: "Eagle.",
-										desc: "You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. Additionally, dim light doesn't impose disadvantage on your Wisdom (Perception) checks.",
+										body: "You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. Additionally, dim light doesn't impose disadvantage on your Wisdom (Perception) checks.",
 									},
 									{
 										index: "elk",
 										name: "Elk.",
-										desc: "Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to ten companions while they're within 60 feet of you and you're not incapacitated. The elk spirit helps you roam far and fast.",
+										body: "Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to ten companions while they're within 60 feet of you and you're not incapacitated. The elk spirit helps you roam far and fast.",
 									},
 									{
 										index: "tiger",
 										name: "Tiger.",
-										desc: "You gain proficiency in two skills from the following list: Athletics, Acrobatics, Stealth, and Survival. The cat spirit hones your survival instincts.",
+										body: "You gain proficiency in two skills from the following list: Athletics, Acrobatics, Stealth, and Survival. The cat spirit hones your survival instincts.",
 									},
 									{
 										index: "wolf",
 										name: "Wolf.",
-										desc: "You gain the hunting sensibilities of a wolf. You can track other creatures while traveling at a fast pace, and you can move stealthily while traveling at a normal pace.",
+										body: "You gain the hunting sensibilities of a wolf. You can track other creatures while traveling at a fast pace, and you can move stealthily while traveling at a normal pace.",
 									},
 								],
 							},
@@ -934,7 +934,7 @@ export default [
 								name: "Spirit Walker",
 								desc: [
 									{
-										desc: "At 10th level, you can cast the commune with nature spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek.",
+										body: "At 10th level, you can cast the commune with nature spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek.",
 									},
 								],
 							},
@@ -948,32 +948,32 @@ export default [
 								name: "Totemic Attunement",
 								desc: [
 									{
-										desc: "At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.",
+										body: "At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.",
 									},
 									{
 										index: "bear",
 										name: "Bear.",
-										desc: "Bear. While you're raging, any creature within 5 feet of you that's hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can't see or hear you or if it can't be frightened.",
+										body: "Bear. While you're raging, any creature within 5 feet of you that's hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can't see or hear you or if it can't be frightened.",
 									},
 									{
 										index: "eagle",
 										name: "Eagle.",
-										desc: "While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.",
+										body: "While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.",
 									},
 									{
 										index: "elk",
 										name: "Elk.",
-										desc: "While raging, you can use a bonus action during your move to pass through the space of a Large or smaller creature. That creature must succeed on a Strength saving throw (DC 8 + your Strength bonus + your proficiency bonus) or be knocked prone and take bludgeoning damage equal to 1d12 + your Strength modifier.",
+										body: "While raging, you can use a bonus action during your move to pass through the space of a Large or smaller creature. That creature must succeed on a Strength saving throw (DC 8 + your Strength bonus + your proficiency bonus) or be knocked prone and take bludgeoning damage equal to 1d12 + your Strength modifier.",
 									},
 									{
 										index: "tiger",
 										name: "Tiger.",
-										desc: "While you're raging, if you move at least 20 feet in a straight line toward a Large or smaller target right before making a melee weapon attack against it, you can use a bonus action to make an additional melee weapon attack against it.",
+										body: "While you're raging, if you move at least 20 feet in a straight line toward a Large or smaller target right before making a melee weapon attack against it, you can use a bonus action to make an additional melee weapon attack against it.",
 									},
 									{
 										index: "wolf",
 										name: "Wolf.",
-										desc: "While you're raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack.",
+										body: "While you're raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack.",
 									},
 								],
 							},
@@ -1689,7 +1689,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.",
+										body: "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.",
 									},
 								],
 							},
@@ -1700,13 +1700,13 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others.",
+										body: "Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others.",
 									},
 									{
-										desc: "When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll.",
+										body: "When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll.",
 									},
 									{
-										desc: "You can choose to use this feature after the creature makes its roll, but before the GM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being charmed.",
+										body: "You can choose to use this feature after the creature makes its roll, but before the GM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being charmed.",
 									},
 								],
 								url: "/api/2014/features/cutting-words",
@@ -1725,7 +1725,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "At 6th level, you learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don't count against the number of bard spells you know.",
+										body: "At 6th level, you learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don't count against the number of bard spells you know.",
 									},
 								],
 							},
@@ -1742,7 +1742,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the GM tells you whether you succeed or fail.",
+										body: "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the GM tells you whether you succeed or fail.",
 									},
 								],
 							},
@@ -1771,7 +1771,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "When you join the College of Valor at 3rd level, you gain proficiency with medium armor, shields, and martial weapons.",
+										body: "When you join the College of Valor at 3rd level, you gain proficiency with medium armor, shields, and martial weapons.",
 									},
 								],
 							},
@@ -1782,7 +1782,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Also at 3rd level, you learn to inspire others in battle. A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses.",
+										body: "Also at 3rd level, you learn to inspire others in battle. A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses.",
 									},
 								],
 							},
@@ -1798,7 +1798,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+										body: "Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
 									},
 								],
 							},
@@ -1814,7 +1814,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "At 14th level, you have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action.",
+										body: "At 14th level, you have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action.",
 									},
 								],
 							},
@@ -2341,7 +2341,7 @@ export default [
 								name: "Bonus Proficiency",
 								desc: [
 									{
-										desc: "When you choose this domain at 1st level, you gain proficiency with heavy armor.",
+										body: "When you choose this domain at 1st level, you gain proficiency with heavy armor.",
 									},
 								],
 							},
@@ -2350,7 +2350,7 @@ export default [
 								name: "Disciple of Life",
 								desc: [
 									{
-										desc: "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level.",
+										body: "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level.",
 									},
 								],
 							},
@@ -2364,10 +2364,10 @@ export default [
 								name: "Channel Divinity: Preserve Life",
 								desc: [
 									{
-										desc: "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.",
+										body: "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.",
 									},
 									{
-										desc: "As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct.",
+										body: "As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct.",
 									},
 								],
 							},
@@ -2381,7 +2381,7 @@ export default [
 								name: "Blessed Healer",
 								desc: [
 									{
-										desc: "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level.",
+										body: "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level.",
 									},
 								],
 							},
@@ -2395,7 +2395,7 @@ export default [
 								name: "Divine Strike",
 								desc: [
 									{
-										desc: "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+										body: "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
 									},
 								],
 							},
@@ -2409,7 +2409,7 @@ export default [
 								name: "Supreme Healing",
 								desc: [
 									{
-										desc: "Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die.",
+										body: "Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die.",
 									},
 								],
 							},
@@ -2585,10 +2585,10 @@ export default [
 								name: "Blessings of Knowledge",
 								desc: [
 									{
-										desc: "At 1st level, you learn two languages of your choice. You also become proficient in your choice of two of the following skills: Arcana, History, Nature, or Religion.",
+										body: "At 1st level, you learn two languages of your choice. You also become proficient in your choice of two of the following skills: Arcana, History, Nature, or Religion.",
 									},
 									{
-										desc: "Your proficiency bonus is doubled for any ability check you make that uses either of those skills.",
+										body: "Your proficiency bonus is doubled for any ability check you make that uses either of those skills.",
 									},
 								],
 							},
@@ -2602,7 +2602,7 @@ export default [
 								name: "Channel Divinity: Knowledge of the Ages",
 								desc: [
 									{
-										desc: "Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool.",
+										body: "Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool.",
 									},
 								],
 							},
@@ -2611,16 +2611,16 @@ export default [
 								name: "Channel Divinity: Read Thoughts",
 								desc: [
 									{
-										desc: "At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it.",
+										body: "At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it.",
 									},
 									{
-										desc: "As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest.",
+										body: "As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest.",
 									},
 									{
-										desc: "If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.",
+										body: "If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.",
 									},
 									{
-										desc: "During that time, you can use your action to end this effect and cast the suggestion spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell.",
+										body: "During that time, you can use your action to end this effect and cast the suggestion spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell.",
 									},
 								],
 							},
@@ -2634,7 +2634,7 @@ export default [
 								name: "Potent Spellcasting",
 								desc: [
 									{
-										desc: "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.",
+										body: "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.",
 									},
 								],
 							},
@@ -2648,16 +2648,16 @@ export default [
 								name: "Visions of the Past",
 								desc: [
 									{
-										desc: "Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
+										body: "Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
 									},
 									{
-										desc: "Once you use this feature, you can't use it again until you finish a short or long rest.",
+										body: "Once you use this feature, you can't use it again until you finish a short or long rest.",
 									},
 									{
-										desc: "Object Reading. Holding an object as you meditate, you can see visions of the object's previous owner. After meditating for 1 minute, you learn how the owner acquired and lost the object, as well as the most recent significant event involving the object and that owner. If the object was owned by another creature in the recent past (within a number of days equal to your Wisdom score), you can spend 1 additional minute for each owner to learn the same information about that creature.",
+										body: "Object Reading. Holding an object as you meditate, you can see visions of the object's previous owner. After meditating for 1 minute, you learn how the owner acquired and lost the object, as well as the most recent significant event involving the object and that owner. If the object was owned by another creature in the recent past (within a number of days equal to your Wisdom score), you can spend 1 additional minute for each owner to learn the same information about that creature.",
 									},
 									{
-										desc: "Area Reading. As you meditate, you see visions of recent events in your immediate vicinity (a room, street, tunnel, clearing, or the like, up to a 50-foot cube), going back a number of days equal to your Wisdom score. For each minute you meditate, you learn about one significant event, beginning with the most recent. Significant events typically involve powerful emotions, such as battles and betrayals, marriages and murders, births and funerals. However, they might also include more mundane events that are nevertheless important in your current situation.",
+										body: "Area Reading. As you meditate, you see visions of recent events in your immediate vicinity (a room, street, tunnel, clearing, or the like, up to a 50-foot cube), going back a number of days equal to your Wisdom score. For each minute you meditate, you learn about one significant event, beginning with the most recent. Significant events typically involve powerful emotions, such as battles and betrayals, marriages and murders, births and funerals. However, they might also include more mundane events that are nevertheless important in your current situation.",
 									},
 								],
 							},
@@ -2833,7 +2833,7 @@ export default [
 								name: "Bonus Proficiencies",
 								desc: [
 									{
-										desc: "At 1st level, you gain proficiency with martial weapons and heavy armor.",
+										body: "At 1st level, you gain proficiency with martial weapons and heavy armor.",
 									},
 								],
 							},
@@ -2842,10 +2842,10 @@ export default [
 								name: "War Priest",
 								desc: [
 									{
-										desc: "From 1st level, your god delivers bolts of inspiration to you while you are engaged in battle. When you use the Attack action, you can make one weapon attack as a bonus action.",
+										body: "From 1st level, your god delivers bolts of inspiration to you while you are engaged in battle. When you use the Attack action, you can make one weapon attack as a bonus action.",
 									},
 									{
-										desc: "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest.",
+										body: "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest.",
 									},
 								],
 							},
@@ -2862,7 +2862,7 @@ export default [
 								name: "Channel Divinity: Guided Strike",
 								desc: [
 									{
-										desc: "Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses.",
+										body: "Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses.",
 									},
 								],
 							},
@@ -2871,7 +2871,7 @@ export default [
 								name: "Channel Divinity: War God's Blessing",
 								desc: [
 									{
-										desc: "At 6th level, you can use your Channel Divinity to grant the same benefit to another creature. When a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses.",
+										body: "At 6th level, you can use your Channel Divinity to grant the same benefit to another creature. When a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses.",
 									},
 								],
 							},
@@ -2885,7 +2885,7 @@ export default [
 								name: "Divine Strike",
 								desc: [
 									{
-										desc: "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8.",
+										body: "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8.",
 									},
 								],
 							},
@@ -2899,7 +2899,7 @@ export default [
 								name: "Avatar of Battle",
 								desc: [
 									{
-										desc: "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.",
+										body: "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.",
 									},
 								],
 							},
@@ -3075,7 +3075,7 @@ export default [
 								name: "Bonus Cantrip",
 								desc: [
 									{
-										desc: "When you choose this domain at 1st level, you gain the light cantrip if you don’t already know it.",
+										body: "When you choose this domain at 1st level, you gain the light cantrip if you don’t already know it.",
 									},
 								],
 							},
@@ -3084,16 +3084,16 @@ export default [
 								name: "Warding Flare",
 								desc: [
 									{
-										desc: "Also at 1st level, you can interpose divine light between yourself and an attacking enemy.",
+										body: "Also at 1st level, you can interpose divine light between yourself and an attacking enemy.",
 									},
 									{
-										desc: "When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll.",
+										body: "When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll.",
 									},
 									{
-										desc: "An attacker that can’t be blinded is immune to this feature.",
+										body: "An attacker that can’t be blinded is immune to this feature.",
 									},
 									{
-										desc: "You can use this feature a number of times equal to your Wisdom modifier (minimum once). You regain expended uses after a long rest.",
+										body: "You can use this feature a number of times equal to your Wisdom modifier (minimum once). You regain expended uses after a long rest.",
 									},
 								],
 							},
@@ -3107,13 +3107,13 @@ export default [
 								name: "Channel Divinity: Radiance of the Dawn",
 								desc: [
 									{
-										desc: "Starting at 2nd level, you can use your Channel Divinity to harness sunlight.",
+										body: "Starting at 2nd level, you can use your Channel Divinity to harness sunlight.",
 									},
 									{
-										desc: "As an action, you present your holy symbol, and dispel magical darkness within 30 feet.",
+										body: "As an action, you present your holy symbol, and dispel magical darkness within 30 feet.",
 									},
 									{
-										desc: "Each hostile creature within 30 feet must make a Constitution saving throw, taking radiant damage equal to 2d10 + your cleric level on a failed save, half on success.",
+										body: "Each hostile creature within 30 feet must make a Constitution saving throw, taking radiant damage equal to 2d10 + your cleric level on a failed save, half on success.",
 									},
 								],
 							},
@@ -3127,7 +3127,7 @@ export default [
 								name: "Improved Warding Flare",
 								desc: [
 									{
-										desc: "Starting at 6th level, you can use Warding Flare to protect other creatures within 30 feet.",
+										body: "Starting at 6th level, you can use Warding Flare to protect other creatures within 30 feet.",
 									},
 								],
 							},
@@ -3141,7 +3141,7 @@ export default [
 								name: "Potent Spellcasting",
 								desc: [
 									{
-										desc: "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.",
+										body: "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.",
 									},
 								],
 							},
@@ -3155,13 +3155,13 @@ export default [
 								name: "Corona of Light",
 								desc: [
 									{
-										desc: "Starting at 17th level, you can use your action to activate an aura of sunlight for 1 minute.",
+										body: "Starting at 17th level, you can use your action to activate an aura of sunlight for 1 minute.",
 									},
 									{
-										desc: "Bright light shines 60 feet, dim light 30 more.",
+										body: "Bright light shines 60 feet, dim light 30 more.",
 									},
 									{
-										desc: "Enemies in bright light have disadvantage on saves against fire or radiant spells you cast.",
+										body: "Enemies in bright light have disadvantage on saves against fire or radiant spells you cast.",
 									},
 								],
 							},
@@ -3337,7 +3337,7 @@ export default [
 								name: "Acolyte of Nature",
 								desc: [
 									{
-										desc: "At 1st level, you learn one druid cantrip of your choice. You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.",
+										body: "At 1st level, you learn one druid cantrip of your choice. You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.",
 									},
 								],
 							},
@@ -3346,7 +3346,7 @@ export default [
 								name: "Bonus Proficiency",
 								desc: [
 									{
-										desc: "Also at 1st level, you gain proficiency with heavy armor.",
+										body: "Also at 1st level, you gain proficiency with heavy armor.",
 									},
 								],
 							},
@@ -3360,13 +3360,13 @@ export default [
 								name: "Channel Divinity: Charm Animals and Plants",
 								desc: [
 									{
-										desc: "Starting at 2nd level, you can use your Channel Divinity to charm animals and plants.",
+										body: "Starting at 2nd level, you can use your Channel Divinity to charm animals and plants.",
 									},
 									{
-										desc: "As an action, you present your holy symbol and invoke the name of your deity. Each beast or plant creature within 30 feet of you that can see you must make a Wisdom saving throw. If the creature fails its saving throw, it is charmed by you for 1 minute or until it takes damage.",
+										body: "As an action, you present your holy symbol and invoke the name of your deity. Each beast or plant creature within 30 feet of you that can see you must make a Wisdom saving throw. If the creature fails its saving throw, it is charmed by you for 1 minute or until it takes damage.",
 									},
 									{
-										desc: "While it is charmed by you, the creature is friendly to you and other creatures you designate.",
+										body: "While it is charmed by you, the creature is friendly to you and other creatures you designate.",
 									},
 								],
 							},
@@ -3380,7 +3380,7 @@ export default [
 								name: "Dampen Elements",
 								desc: [
 									{
-										desc: "Starting at 6th level, when you or a creature within 30 feet of you takes acid, cold, fire, lightning, or thunder damage, you can use your reaction to grant resistance to the creature against that instance of the damage.",
+										body: "Starting at 6th level, when you or a creature within 30 feet of you takes acid, cold, fire, lightning, or thunder damage, you can use your reaction to grant resistance to the creature against that instance of the damage.",
 									},
 								],
 							},
@@ -3394,7 +3394,7 @@ export default [
 								name: "Divine Strike",
 								desc: [
 									{
-										desc: "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 cold, fire, or lightning damage (your choice) to the target. When you reach 14th level, the extra damage increases to 2d8.",
+										body: "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 cold, fire, or lightning damage (your choice) to the target. When you reach 14th level, the extra damage increases to 2d8.",
 									},
 								],
 							},
@@ -3408,7 +3408,7 @@ export default [
 								name: "Master of Nature",
 								desc: [
 									{
-										desc: "At 17th level, you gain the ability to command animals and plants. While creatures are charmed by your Channel Divinity: Charm Animals and Plants feature, you can take a bonus action on your turn to verbally command what each of those creatures will do on its next turn.",
+										body: "At 17th level, you gain the ability to command animals and plants. While creatures are charmed by your Channel Divinity: Charm Animals and Plants feature, you can take a bonus action on your turn to verbally command what each of those creatures will do on its next turn.",
 									},
 								],
 							},
@@ -3584,7 +3584,7 @@ export default [
 								name: "Bonus Proficiencies",
 								desc: [
 									{
-										desc: "When you choose this domain at 1st level, you gain proficiency with martial weapons and heavy armor.",
+										body: "When you choose this domain at 1st level, you gain proficiency with martial weapons and heavy armor.",
 									},
 								],
 							},
@@ -3593,13 +3593,13 @@ export default [
 								name: "Wrath of the Storm",
 								desc: [
 									{
-										desc: "Also at 1st level, you can thunderously rebuke attackers.",
+										body: "Also at 1st level, you can thunderously rebuke attackers.",
 									},
 									{
-										desc: "When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. The creature takes 2d8 lightning or thunder damage (your choice) on a failed save, and half as much damage on a successful one.",
+										body: "When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. The creature takes 2d8 lightning or thunder damage (your choice) on a failed save, and half as much damage on a successful one.",
 									},
 									{
-										desc: "You can use this feature a number of times equal to your Wisdom modifier (minimum once). You regain expended uses when you finish a long rest.",
+										body: "You can use this feature a number of times equal to your Wisdom modifier (minimum once). You regain expended uses when you finish a long rest.",
 									},
 								],
 							},
@@ -3613,10 +3613,10 @@ export default [
 								name: "Channel Divinity: Destructive Wrath",
 								desc: [
 									{
-										desc: "Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity.",
+										body: "Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity.",
 									},
 									{
-										desc: "When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling.",
+										body: "When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling.",
 									},
 								],
 							},
@@ -3630,7 +3630,7 @@ export default [
 								name: "Thunderbolt Strike",
 								desc: [
 									{
-										desc: "At 6th level, when you deal lightning damage to a Large or smaller creature, you can also push it up to 10 feet away from you.",
+										body: "At 6th level, when you deal lightning damage to a Large or smaller creature, you can also push it up to 10 feet away from you.",
 									},
 								],
 							},
@@ -3644,7 +3644,7 @@ export default [
 								name: "Divine Strike",
 								desc: [
 									{
-										desc: "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 thunder damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+										body: "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 thunder damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
 									},
 								],
 							},
@@ -3658,7 +3658,7 @@ export default [
 								name: "Stormborn",
 								desc: [
 									{
-										desc: "At 17th level, you have a flying speed equal to your current walking speed whenever you are not underground or indoors.",
+										body: "At 17th level, you have a flying speed equal to your current walking speed whenever you are not underground or indoors.",
 									},
 								],
 							},
@@ -3834,10 +3834,10 @@ export default [
 								name: "Blessing of the Trickster",
 								desc: [
 									{
-										desc: "Starting when you choose this domain at 1st level, you can use your action to touch a willing creature other than yourself to give it advantage on Dexterity (Stealth) checks.",
+										body: "Starting when you choose this domain at 1st level, you can use your action to touch a willing creature other than yourself to give it advantage on Dexterity (Stealth) checks.",
 									},
 									{
-										desc: "This blessing lasts for 1 hour or until you use this feature again.",
+										body: "This blessing lasts for 1 hour or until you use this feature again.",
 									},
 								],
 							},
@@ -3851,19 +3851,19 @@ export default [
 								name: "Channel Divinity: Invoke Duplicity",
 								desc: [
 									{
-										desc: "Starting at 2nd level, you can use your Channel Divinity to create an illusory duplicate of yourself.",
+										body: "Starting at 2nd level, you can use your Channel Divinity to create an illusory duplicate of yourself.",
 									},
 									{
-										desc: "As an action, you create a perfect illusion of yourself that lasts for 1 minute, or until you lose your concentration (as if you were concentrating on a spell). The illusion appears in an unoccupied space within 30 feet of you that you can see.",
+										body: "As an action, you create a perfect illusion of yourself that lasts for 1 minute, or until you lose your concentration (as if you were concentrating on a spell). The illusion appears in an unoccupied space within 30 feet of you that you can see.",
 									},
 									{
-										desc: "As a bonus action on your turn, you can move the illusion up to 30 feet to a space you can see, but it must remain within 120 feet of you.",
+										body: "As a bonus action on your turn, you can move the illusion up to 30 feet to a space you can see, but it must remain within 120 feet of you.",
 									},
 									{
-										desc: "For the duration, you can cast spells as though you were in the illusion’s space, but you must use your own senses.",
+										body: "For the duration, you can cast spells as though you were in the illusion’s space, but you must use your own senses.",
 									},
 									{
-										desc: "Additionally, when both you and your illusion are within 5 feet of a creature that can see the illusion, you have advantage on attack rolls against that creature.",
+										body: "Additionally, when both you and your illusion are within 5 feet of a creature that can see the illusion, you have advantage on attack rolls against that creature.",
 									},
 								],
 							},
@@ -3877,10 +3877,10 @@ export default [
 								name: "Channel Divinity: Cloak of Shadows",
 								desc: [
 									{
-										desc: "Starting at 6th level, you can use your Channel Divinity to vanish.",
+										body: "Starting at 6th level, you can use your Channel Divinity to vanish.",
 									},
 									{
-										desc: "As an action, you become invisible until the end of your next turn. You become visible if you attack or cast a spell.",
+										body: "As an action, you become invisible until the end of your next turn. You become visible if you attack or cast a spell.",
 									},
 								],
 							},
@@ -3894,7 +3894,7 @@ export default [
 								name: "Divine Strike",
 								desc: [
 									{
-										desc: "At 8th level, you gain the ability to infuse your weapon strikes with poison. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
+										body: "At 8th level, you gain the ability to infuse your weapon strikes with poison. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8.",
 									},
 								],
 							},
@@ -3908,10 +3908,10 @@ export default [
 								name: "Improved Duplicity",
 								desc: [
 									{
-										desc: "At 17th level, you can create up to four duplicates of yourself, instead of one, when you use Invoke Duplicity.",
+										body: "At 17th level, you can create up to four duplicates of yourself, instead of one, when you use Invoke Duplicity.",
 									},
 									{
-										desc: "As a bonus action on your turn, you can move any number of them up to 30 feet, to a maximum range of 120 feet.",
+										body: "As a bonus action on your turn, you can move any number of them up to 30 feet, to a maximum range of 120 feet.",
 									},
 								],
 							},
@@ -5463,7 +5463,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "When you choose this circle at 2nd level, you learn one additional druid cantrip of your choice.",
+										body: "When you choose this circle at 2nd level, you learn one additional druid cantrip of your choice.",
 									},
 								],
 							},
@@ -5474,10 +5474,10 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature. During a short rest, you choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your druid level (rounded up), and none of the slots can be 6th level or higher. You can't use this feature again until you finish a long rest.",
+										body: "Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature. During a short rest, you choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your druid level (rounded up), and none of the slots can be 6th level or higher. You can't use this feature again until you finish a long rest.",
 									},
 									{
-										desc: "For example, when you are a 4th-level druid, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level slot or two 1st-level slots.",
+										body: "For example, when you are a 4th-level druid, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level slot or two 1st-level slots.",
 									},
 								],
 							},
@@ -5493,10 +5493,10 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "Starting at 6th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
+										body: "Starting at 6th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
 									},
 									{
-										desc: "In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell.",
+										body: "In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell.",
 									},
 								],
 							},
@@ -5512,7 +5512,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "When you reach 10th level, you can't be charmed or frightened by elementals or fey, and you are immune to poison and disease.",
+										body: "When you reach 10th level, you can't be charmed or frightened by elementals or fey, and you are immune to poison and disease.",
 									},
 								],
 							},
@@ -5530,7 +5530,7 @@ export default [
 								prerequisites: [],
 								desc: [
 									{
-										desc: "When you reach 14th level, creatures of the natural world sense your connection to nature and become hesitant to attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours. The creature is aware of this effect before it makes its attack against you.",
+										body: "When you reach 14th level, creatures of the natural world sense your connection to nature and become hesitant to attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours. The creature is aware of this effect before it makes its attack against you.",
 									},
 								],
 							},
