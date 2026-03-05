@@ -13,6 +13,7 @@
     --color-slate-800: var(--color-sky-800);
     --color-slate-900: var(--color-sky-900);
     --color-slate-950: var(--color-sky-950); */
+    --text-tiny: 0.625rem;
 }
 
 body {

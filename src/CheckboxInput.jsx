@@ -17,7 +17,7 @@ export default function CheckboxInput({
 				>
 					<input
 						type="checkbox"
-						className="peer h-4 w-4 transition-all appearance-none bg-white dark:bg-slate-600 rounded hover:shadow-sm dark:shadow-slate-500 dark:hover:border-slate-500 border border-slate-300 dark:border-slate-700 checked:bg-slate-600 checked:border-slate-600 dark:checked:border-slate-200 dark:checked:bg-slate-200 disabled:bg-slate-300 disabled:border-slate-400 dark:disabled:checked:border-slate-400 dark:disabled:checked:bg-slate-400"
+						className="peer h-4 w-4 transition-all appearance-none bg-white dark:bg-slate-600 rounded hover:shadow-sm dark:shadow-slate-500 dark:hover:border-slate-500 border border-slate-300 dark:border-slate-700 checked:bg-slate-600 checked:border-slate-600 checked:disabled:bg-slate-400 dark:checked:border-slate-200 dark:checked:bg-slate-200 disabled:bg-slate-300 disabled:border-slate-400 dark:disabled:checked:border-slate-400 dark:disabled:checked:bg-slate-400"
 						id={id}
 						name={name}
 						onChange={handleChange}

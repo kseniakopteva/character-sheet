@@ -1,9 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import { CharacterContext } from "./contexts";
+import { CharacterContext, SkillContext } from "./contexts";
 import Card from "./Card";
 
 export default function characterBackground({ styles }) {
 	const [characterInfo, setCharacterInfo] = useContext(CharacterContext);
+	const [skills, setSkills] = useContext(SkillContext);
 
 	const [characterBackgrounds, setCharacterBackgrounds] = useState(null);
 
@@ -37,18 +38,33 @@ export default function characterBackground({ styles }) {
 		);
 	}
 
+	function handleChange(e) {
+		if (!e.target.value) return false;
+
+		setCharacterInfo((prev) => ({
+			...prev,
+			characterBackground: characterBackgrounds.find(
+				(elem) => elem.name === e.target.value,
+			),
+		}));
+
+		let proficiencies = characterBackgrounds
+			.find((elem) => elem.name === e.target.value)
+			.starting_proficiencies.map((elem) => elem.index)
+			.map((ele) => ele.replace(/^skill-/, ""));
+
+		let newSkills = [...skills];
+		newSkills.map((elem) =>
+			proficiencies.includes(elem.index) ? (elem.proficiency = true) : null,
+		);
+		setSkills(newSkills);
+	}
+
 	return (
 		<Card styles={" " + styles}>
 			<select
 				className="h-full w-full p-1 border-slate-300 border bg-slate-200 dark:border-slate-900 rounded-xs focus:ring-2 focus:ring-slate-500 focus:outline-none dark:ring-1 dark:ring-white/5 dark:focus:ring-2 dark:focus:ring-slate-300"
-				onChange={(e) =>
-					setCharacterInfo((prev) => ({
-						...prev,
-						characterBackground: characterBackgrounds.find(
-							(elem) => elem.name === e.target.value,
-						),
-					}))
-				}
+				onChange={(e) => handleChange(e)}
 				value={characterInfo.characterBackground.name}
 			>
 				<option value="" selected="selected"></option>

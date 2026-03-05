@@ -7,57 +7,33 @@ export default [
 			{
 				desc: "Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival",
 				choose: 2,
-				type: "proficiencies",
+				type: "skills",
 				from: {
 					option_set_type: "options_array",
 					options: [
 						{
-							option_type: "reference",
-							item: {
-								index: "skill-animal-handling",
-								name: "Skill: Animal Handling",
-								url: "/api/2014/proficiencies/skill-animal-handling",
-							},
+							index: "animal-handling",
+							name: "Animal Handling",
 						},
 						{
-							option_type: "reference",
-							item: {
-								index: "skill-athletics",
-								name: "Skill: Athletics",
-								url: "/api/2014/proficiencies/skill-athletics",
-							},
+							index: "athletics",
+							name: "Athletics",
 						},
 						{
-							option_type: "reference",
-							item: {
-								index: "skill-intimidation",
-								name: "Skill: Intimidation",
-								url: "/api/2014/proficiencies/skill-intimidation",
-							},
+							index: "intimidation",
+							name: "Intimidation",
 						},
 						{
-							option_type: "reference",
-							item: {
-								index: "skill-nature",
-								name: "Skill: Nature",
-								url: "/api/2014/proficiencies/skill-nature",
-							},
+							index: "nature",
+							name: "Nature",
 						},
 						{
-							option_type: "reference",
-							item: {
-								index: "skill-perception",
-								name: "Skill: Perception",
-								url: "/api/2014/proficiencies/skill-perception",
-							},
+							index: "perception",
+							name: "Perception",
 						},
 						{
-							option_type: "reference",
-							item: {
-								index: "skill-survival",
-								name: "Skill: Survival",
-								url: "/api/2014/proficiencies/skill-survival",
-							},
+							index: "survival",
+							name: "Survival",
 						},
 					],
 				},
