@@ -5,11 +5,11 @@ import { AbilityScoreContext, SkillContext } from "./contexts";
 
 export default function PassiveWisdom({ styles }) {
 	const [abilityScores] = useContext(AbilityScoreContext);
-	const [skills] = useContext(SkillContext);
+	const [skillsState] = useContext(SkillContext);
 
 	const passiveWisdom = calculateModifier(
 		abilityScores.wis,
-		skills.find((elem) => elem.index === "perception").proficiency,
+		skillsState.skills.find((elem) => elem.index === "perception").proficiency,
 		"string",
 	);
 

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect } from "react";
 import { AbilityScoreContext, CharacterContext, SkillContext } from "./contexts";
 import Card from "./Card";
 import CheckboxInput from "./CheckboxInput";
@@ -7,44 +7,52 @@ import { SvgCheck } from "./svg";
 
 export default function Skills({ styles, title }) {
 	const [characterInfo] = useContext(CharacterContext);
-	const [skills, setSkills] = useContext(SkillContext);
+	const [skillsState, setSkills] = useContext(SkillContext);
 	const [abilityScores] = useContext(AbilityScoreContext);
 
-	// TODO: remove repeating onCheckChange
+	// TODO: refactor this file
 
 	const skillProfArr =
 		characterInfo.characterClass?.proficiency_choices?.filter(
 			(elem) => elem.type === "skills",
 		) ?? [];
 
-	let given = 0;
-	skillProfArr.forEach((el) => {
-		given += el.choose;
-	});
+	useEffect(() => {
+		setSkills((prev) => ({
+			...prev,
+			given: skillProfArr.reduce((sum, el) => sum + el.choose, 0),
+		}));
+	}, [characterInfo]);
 
-	const [chosen, setChosen] = useState(0);
 	const choosableSkills = Array.from(
 		(skillProfArr ?? []).flatMap((ele) => ele.from.options),
 	);
 
 	function onCheckChange(e) {
-		setSkills((prev) =>
-			prev.map((skill) =>
+		setSkills((prev) => {
+			const updatedSkills = prev.skills.map((skill) =>
 				skill.index === e.target.name
 					? {
 							...skill,
 							proficiency: e.target.checked,
+							chosen: e.target.checked,
 						}
 					: skill,
-			),
-		);
-		setChosen(e.target.checked ? chosen + 1 : chosen - 1);
+			);
+			return {
+				...prev,
+				chosen: e.target.checked
+					? skillsState.chosen + 1
+					: skillsState.chosen - 1,
+				skills: updatedSkills,
+			};
+		});
 	}
-
+	console.log("skillsState: ", skillsState);
 	return (
 		<Card styles={" flex-1 overflow-y-auto min-h-0 " + styles} title={title}>
 			<ul>
-				{skills.map((s) => (
+				{skillsState.skills.map((s) => (
 					<CheckboxInput
 						key={s.index}
 						id={s.index}
@@ -53,7 +61,8 @@ export default function Skills({ styles, title }) {
 						checked={s.proficiency}
 						disabled={
 							!choosableSkills.some((el) => el.index === s.index) ||
-							(chosen >= given && !s.proficiency)
+							(skillsState.chosen >= skillsState.given && !s.proficiency) ||
+							(s.proficiency && !s.chosen)
 						}
 					>
 						<span className="inline-block w-6 text-center px-1 mr-1 border-b">
@@ -67,8 +76,9 @@ export default function Skills({ styles, title }) {
 					</CheckboxInput>
 				))}
 			</ul>
+
 			<div className="absolute top-3 right-3 bg-slate-200 border border-slate-400">
-				{characterInfo.characterClass?.proficiency_choices?.map((choice) => (
+				{skillProfArr?.map((choice) => (
 					<>
 						<div className="text-xs w-full border-b border-slate-400 px-1">
 							FROM:CLASS
@@ -77,7 +87,7 @@ export default function Skills({ styles, title }) {
 							{choice.desc}
 						</p>
 						<span
-							className={`flex items-center justify-center italic text-emerald-600 bg-emerald-100 text-xs ${!(chosen >= given) && "hidden"}`}
+							className={`flex items-center justify-center italic text-emerald-600 bg-emerald-100 text-xs ${!(skillsState.chosen >= skillsState.given) && "hidden"}`}
 						>
 							DONE <SvgCheck />
 						</span>

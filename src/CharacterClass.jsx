@@ -1,11 +1,12 @@
 import { useState, useContext } from "react";
-import { CharacterContext, ChosenEquipmentContext } from "./contexts";
+import { CharacterContext, ChosenEquipmentContext, SkillContext } from "./contexts";
 import Card from "./Card";
 import classes from "./data/classes";
 
 export default function CharacterClass({ styles }) {
 	const [characterInfo, setCharacterInfo] = useContext(CharacterContext);
 	const [chosenEquipment, setChosenEquipment] = useContext(ChosenEquipmentContext);
+	const [skillsState, setSkills] = useContext(SkillContext);
 
 	const [characterClasses] = useState(classes);
 
@@ -22,6 +23,18 @@ export default function CharacterClass({ styles }) {
 			allProficiencies: proficiencies,
 		}));
 		setChosenEquipment([]);
+
+		const newSkills = skillsState.skills.map((elem) => ({
+			...elem,
+			proficiency: elem.chosen ? false : elem.proficiency,
+			chosen: false,
+		}));
+
+		setSkills((prev) => ({
+			...prev,
+			chosen: 0,
+			skills: newSkills,
+		}));
 	}
 
 	if (!characterClasses) {

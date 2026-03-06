@@ -4,7 +4,7 @@ import Card from "./Card";
 
 export default function characterBackground({ styles }) {
 	const [characterInfo, setCharacterInfo] = useContext(CharacterContext);
-	const [skills, setSkills] = useContext(SkillContext);
+	const [skillsState, setSkills] = useContext(SkillContext);
 
 	const [characterBackgrounds, setCharacterBackgrounds] = useState(null);
 
@@ -53,11 +53,32 @@ export default function characterBackground({ styles }) {
 			.starting_proficiencies.map((elem) => elem.index)
 			.map((ele) => ele.replace(/^skill-/, ""));
 
-		let newSkills = [...skills];
-		newSkills.map((elem) =>
-			proficiencies.includes(elem.index) ? (elem.proficiency = true) : null,
-		);
-		setSkills(newSkills);
+		let chosenAmount = skillsState.chosen;
+
+		const newSkills = skillsState.skills.map((elem) => {
+			let newElemChosenValue = elem.chosen;
+			let newElemProfValue = elem.proficiency;
+			if (proficiencies.includes(elem.index)) {
+				if (elem.chosen) {
+					chosenAmount--;
+					newElemChosenValue = false;
+				}
+				newElemProfValue = true;
+				newElemChosenValue = false;
+			}
+
+			return {
+				...elem,
+				proficiency: newElemProfValue,
+				chosen: newElemChosenValue,
+			};
+		});
+
+		setSkills((prev) => ({
+			...prev,
+			chosen: chosenAmount,
+			skills: newSkills,
+		}));
 	}
 
 	return (
